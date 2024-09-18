@@ -1,0 +1,435 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+:root {
+  --masi-red: #ff0000;
+  --masi-blue: #0000ee;
+  --masi-yellow: #ffde5f;
+  --masi-green: green;
+  --masi-red-2: #ea294c;
+}
+
+/* Navbar Styling */
+#navbar {
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  transition: background-color 0.5s ease; /* Smooth transition */
+  backdrop-filter: blur(10px); /* Optional: Adds a blur effect behind the navbar */
+}
+
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* Opaque background when scrolled */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow when scrolled */
+}
+
+.navbar-brand img {
+  max-height: 50px; /* Adjust logo size */
+}
+
+/* Donation button */
+.btn-danger {
+  margin-right: 10px;
+}
+
+/* HERO BANNER */
+.video-container {
+  height: 100vh;
+  position: relative;
+}
+
+.video-container > h1 {
+  z-index: 1;
+  color: white;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-60%, -60%);
+  text-align: left;
+  color: white;
+}
+
+.video-overlay h1 {
+  color: white;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+#opportunities {
+  color: red;
+}
+
+.full-width-section {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.bg-gray-strip {
+  background-color: #e8ecf0;
+  opacity: 0.95;
+  color: bs-dark;
+}
+
+.font-stat-lg {
+  font-size: 3rem;
+}
+
+.full-strip-img {
+  width: 100%; /* Ensures it takes the full width of the parent container */
+  object-fit: contain; /* Adjusts the image to fit within the given dimensions without distortion */
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.text-content {
+  position: absolute; /* Position the text content over the image */
+  top: 60%; /* Center vertically */
+  left: 25%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the position back by 50% of its own height and width */
+  color: white; /* Ensures the text is visible */
+  text-align: center; /* Centers the text within the text-content box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.top-strip-stat {
+  color: white;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10rem;
+}
+
+.top-strip-text {
+  font-size: 1.5rem;
+  padding: 0px 20px;
+}
+
+.custom-btn-width {
+  width: 150px;
+  border-radius: 0px;
+}
+
+.top-stats .stat-text {
+  color: var(--masi-red-2);
+  font-size: 3rem;
+}
+
+.mid-stats .stat-text {
+  color: var(--masi-blue);
+  font-size: 3rem;
+}
+
+.bottom-stats .stat-text {
+  color: var(--masi-yellow);
+  font-size: 3rem;
+}
+
+.reasons {
+  background-color: lightgray;
+}
+
+/*
+flip card
+*/
+.card-flip > div {
+  backface-visibility: hidden;
+  transition: transform 300ms;
+  transition-timing-function: linear;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+}
+
+.card-flip:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card-flip:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.logo-scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logo-scroll {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+}
+
+.partner-logo {
+  display: inline-block;
+  height: 100px;
+  margin: 0 20px;
+  filter: grayscale(100%) opacity(0.5);
+  transition: filter 0.3s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* For large tablets and small desktops */
+  .video-overlay h1 {
+    font-size: 3.5rem;
+  }
+  .top-strip-stat {
+    font-size: 8rem;
+  }
+  .top-strip-text {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  /* For medium tablets */
+  .video-overlay h1 {
+    font-size: 3rem;
+  }
+  .top-strip-stat {
+    font-size: 7rem;
+  }
+  .top-strip-text {
+    font-size: 1.1rem;
+  }
+  .text-content {
+    width: 60%;
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For tablets and large phones */
+  .video-overlay h1 {
+    font-size: 2.5rem;
+  }
+  .text-content {
+    width: 70%;
+    left: 35%;
+  }
+  .top-strip-stat {
+    font-size: 6rem;
+  }
+  .top-strip-text {
+    font-size: 1rem;
+  }
+  .top-stats .stat-text,
+  .mid-stats .stat-text,
+  .bottom-stats .stat-text {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  /* For small phones */
+  .video-overlay h1 {
+    font-size: 2rem;
+  }
+  .text-content {
+    width: 80%;
+    left: 40%;
+  }
+  .top-strip-stat {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+  }
+  .top-strip-text {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+  .top-stats .stat-text,
+  .mid-stats .stat-text,
+  .bottom-stats .stat-text {
+    font-size: 2rem;
+  }
+  .custom-btn-width {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* For very small phones */
+  .top-strip-stat {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    margin-bottom: 0px;
+  }
+  .top-strip-text {
+    font-size: 0.75rem;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+  .text-content {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* For large desktops */
+  .video-overlay h1 {
+    font-size: 4.5rem;
+  }
+}
+/* Ensuring the video covers the header area */
+#hero {
+  height: 80vh;
+}
+
+#background-video {
+  object-fit: cover;
+}
+
+/* Optional shadow effect for the hero text */
+.text-shadow {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#image-gallery {
+  overflow: hidden;
+}
+
+.scroll-container {
+  overflow: hidden; /* Prevent vertical scrolling */
+  white-space: nowrap; /* Ensure all content stays in a single line */
+  width: 100%; /* Take up full width of the parent container */
+}
+
+.scroll-content {
+  display: inline-block; /* Keep the content in a horizontal line */
+  white-space: nowrap; /* Ensure no line breaks between images */
+  animation: scroll 30s linear infinite; /* Add the scrolling animation */
+}
+
+.scroll-content-reverse {
+  animation: scroll 30s linear infinite reverse;
+}
+
+.scroll-content-fast {
+  animation-duration: 60s;
+}
+
+.scroll-content-slow {
+  animation-duration: 80s;
+}
+
+.gallery-img {
+  height: 200px; /* Adjust image height */
+  display: inline-block; /* Ensure images stay in a single line */
+  margin-right: 10px; /* Add some space between images */
+  vertical-align: middle; /* Align images properly */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+#executive .col-md-3 {
+  max-width: 100%; /* Allow the image container to be as wide as needed */
+}
+
+.hero-text-about {
+  transform: translateY(-50%);
+  width: 30%;
+}
+
+.zama-image {
+  max-width: 100%; /* Make sure it doesn’t exceed the container’s width */
+  height: auto;
+}
+
+/* Home Page Reports Section */
+.report:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
+.feature-reports .report-wrapper {
+  display: inline-block;
+  max-width: 100%; /* Ensures the wrapper doesn't exceed the column width */
+}
+.feature-reports .report {
+  display: inline-block;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 100%; /* Ensures the report doesn't exceed the wrapper width */
+}
+.feature-reports .report-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+.feature-reports .report-text {
+  text-align: left;
+}
+.feature-reports .report-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.feature-reports .report-text ul {
+  list-style: none;
+  padding: 0;
+}
+.feature-reports .report-text ul li {
+  font-size: 1rem;
+  color: #28a745;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.modal-feature-reports .report-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-feature-reports .report-img {
+  max-width: 80%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.modal-feature-reports .report-img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .feature-reports .report-wrapper,
+  .feature-reports .report {
+    max-width: 90%; /* Adjust this value as needed */
+  }
+}
