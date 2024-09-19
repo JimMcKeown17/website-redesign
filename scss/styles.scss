@@ -413,7 +413,7 @@ flip card
 }
 
 .zama-image {
-  max-width: 100%; /* Make sure it doesn’t exceed the container’s width */
+  max-width: 100%; /* Make sure it doesn't exceed the container's width */
   height: auto;
 }
 
@@ -493,4 +493,83 @@ flip card
       max-width: 90%; /* Adjust this value as needed */
     }
   }
+}
+
+.iframe {
+  border: none;
+  height: 100vh;
+  width: 100%;
+}
+
+.data-section {
+  margin-top: 100px;
+}
+
+// IMPACT STATS SECTION w PARALLAX
+.impact-stats-section {
+  position: relative;
+  height: 300vh;
+  overflow: hidden;
+  background-image: url('../images/Strip - Child.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background image fixed */
+}
+
+.stats-container {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+}
+
+.stat {
+  position: fixed; /* Changed from fixed to absolute */
+  top: 50%; /* Initial positioning */
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 100%; /* Ensure it spans the container */
+  box-sizing: border-box;
+}
+
+.stat-scroll-title {
+  font-size: 4rem !important;
+}
+
+.stat-number {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.stat-description {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .stat-scroll-title {
+    font-size: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-description {
+    font-size: 1rem;
+  }
+}
+
+// CHILD INFO STRIP
+
+.impact-stats-section {
+  position: relative;
+  z-index: 1;
+}
+
+.child-info-strip {
+  position: relative;
+  z-index: 2;
 }

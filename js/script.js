@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Stat counter animation (your existing code)
+  // Stat counter animation
   const counters = document.querySelectorAll('.counter');
   const speed = 200;
 
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(counter);
   });
 
-  // Scroll-based navbar behavior (new addition)
+  // Scroll-based navbar behavior
   const navbar = document.getElementById('navbar');
 
   window.addEventListener('scroll', function () {
@@ -60,4 +60,39 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.classList.remove('scrolled');
     }
   });
+
+  // Scroll-based stats opacity update
+  const section = document.querySelector('.impact-stats-section');
+  const stats = document.querySelectorAll('.stat');
+  const sectionHeight = section.offsetHeight;
+
+  function updateStats() {
+    const scrollPosition = window.pageYOffset;
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionScrolled = scrollPosition - sectionTop;
+
+    if (sectionScrolled >= 0 && sectionScrolled <= sectionHeight) {
+      const progress = sectionScrolled / sectionHeight;
+
+      stats.forEach((stat, index) => {
+        const startPoint = index / stats.length;
+        const endPoint = (index + 1) / stats.length;
+
+        if (progress >= startPoint && progress < endPoint) {
+          stat.style.opacity = 1;
+        } else {
+          stat.style.opacity = 0; // Hide stats not in view
+        }
+      });
+    } else {
+      // Hide all stats when outside the section
+      stats.forEach((stat) => {
+        stat.style.opacity = 0;
+      });
+    }
+  }
+
+  window.addEventListener('scroll', updateStats);
+  updateStats(); // Initial call to set correct state on page load
 });
