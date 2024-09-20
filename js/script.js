@@ -95,4 +95,72 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', updateStats);
   updateStats(); // Initial call to set correct state on page load
+
+  // -- About Us Image Track (New Code) --
+
+  const track = document.getElementById('image-track');
+
+  // Function to handle mouse down event
+  const handleOnDown = (e) => (track.dataset.mouseDownAt = e.clientX);
+
+  // Function to handle mouse up event
+  const handleOnUp = () => {
+    track.dataset.mouseDownAt = '0';
+    track.dataset.prevPercentage = track.dataset.percentage;
+  };
+
+  // Function to handle mouse move event
+  const handleOnMove = (e) => {
+    if (track.dataset.mouseDownAt === '0') return;
+
+    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+      maxDelta = window.innerWidth / 2;
+
+    const percentage = (mouseDelta / maxDelta) * -100,
+      nextPercentageUnconstrained =
+        parseFloat(track.dataset.prevPercentage) + percentage,
+      nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+    track.dataset.percentage = nextPercentage;
+
+    // Animate the track to move left and right
+    track.animate(
+      {
+        transform: `translate(${nextPercentage}%, -50%)`,
+      },
+      { duration: 1200, fill: 'forwards' }
+    );
+
+    // Animate each image within the track
+    for (const image of track.getElementsByClassName('image')) {
+      image.animate(
+        {
+          objectPosition: `${100 + nextPercentage}% center`,
+        },
+        { duration: 1200, fill: 'forwards' }
+      );
+    }
+  };
+
+  /* -- Additional handling for touch events -- */
+
+  // Handle mouse down event for desktop
+  window.onmousedown = (e) => handleOnDown(e);
+
+  // Handle touch start event for mobile
+  window.ontouchstart = (e) => handleOnDown(e.touches[0]);
+
+  // Handle mouse up event for desktop
+  window.onmouseup = (e) => handleOnUp(e);
+
+  // Handle touch end event for mobile
+  window.ontouchend = (e) => handleOnUp(e.touches[0]);
+
+  // Handle mouse move event for desktop
+  window.onmousemove = (e) => handleOnMove(e);
+
+  // Handle touch move event for mobile
+  window.ontouchmove = (e) => handleOnMove(e.touches[0]);
+
+  // -- End of About Us Image Track --
 });
