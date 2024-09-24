@@ -61,38 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Scroll-based stats opacity update
-  const section = document.querySelector('.impact-stats-section');
-  const stats = document.querySelectorAll('.stat');
-  const sectionHeight = section.offsetHeight;
-
-  function updateStats() {
-    const scrollPosition = window.pageYOffset;
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionScrolled = scrollPosition - sectionTop;
-
-    if (sectionScrolled >= 0 && sectionScrolled <= sectionHeight) {
-      const progress = sectionScrolled / sectionHeight;
-
-      stats.forEach((stat, index) => {
-        const startPoint = index / stats.length;
-        const endPoint = (index + 1) / stats.length;
-
-        if (progress >= startPoint && progress < endPoint) {
-          stat.style.opacity = 1;
-        } else {
-          stat.style.opacity = 0; // Hide stats not in view
-        }
-      });
-    } else {
-      // Hide all stats when outside the section
-      stats.forEach((stat) => {
-        stat.style.opacity = 0;
-      });
-    }
-  }
-
   window.addEventListener('scroll', updateStats);
   updateStats(); // Initial call to set correct state on page load
 
@@ -161,6 +129,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handle touch move event for mobile
   window.ontouchmove = (e) => handleOnMove(e.touches[0]);
+
+  // Scroll-based fade-in for content
+
+  function handleScroll() {
+    fadeInElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        element.classList.add('visible');
+      }
+    });
+  }
+
+  // Listen for scroll event outside image track logic
+  window.addEventListener('scroll', handleScroll);
 
   // -- End of About Us Image Track --
 });

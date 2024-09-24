@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
     <title>Masinyusane</title>
   </head>
   <body>
@@ -161,64 +166,80 @@
         Your browser does not support the video tag.
       </video>
       <div class="video-overlay">
-        <h1 class="text-shadow">Empowering Through Education</h1>
-        <h3 class="text-shadow text-white">
-          Data-Driven <span id="opportunities">Early Childhood</span> Literacy &
-          Numeracy Programs in Southern Africa.
-        </h3>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-vid-box">
+              <h1 class="text-shadow vid-title mb-3">
+                Empowering Through Education
+              </h1>
+              <p class="text-shadow text-white vid-subtitle">
+                Data-Driven Early Childhood Literacy & Numeracy Programs in
+                Southern Africa.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- MISSION SECTION -->
-    <div class="container mission-section mt-5">
-      <div class="row">
-        <div
-          class="text-center col-md-6 d-flex align-items-center justify-content-center"
-        >
-          <h3>Empowering through Education</h3>
+    <!-- The Problem Section -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img
+            src="images/The Problem.png"
+            class="img-fluid"
+            alt="Graphic"
+            data-aos="fade-right"
+          />
         </div>
         <div class="col-md-6">
-          <p>
-            Masinyusane creates opportunities for impoverished children and
-            youth to get the best education possible. We invest in high-impact
-            education projects that empower the local community to uplift
-            itself.
-          </p>
-          <p>
-            We are simultaneously creating a generation of leaders now while
-            investing in the long-term future of South Africa's children.
+          <h2 class="" data-aos="fade-left">The Problem</h2>
+          <p class="lead" data-aos="fade-left">
+            This is some text that will appear on the right as you scroll. It
+            can contain details about your product, service, or anything else
+            you'd like to showcase.
           </p>
         </div>
       </div>
-    </div>
-    <!-- TEST STRIP w PARALLAX -->
+    </section>
+    <!-- The Problem Section -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="" data-aos="fade-left">The Solution</h2>
+          <p class="lead" data-aos="fade-right">
+            This is some text that will appear on the right as you scroll. It
+            can contain details about your product, service, or anything else
+            you'd like to showcase.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="images/Our Solution.png"
+            class="img-fluid"
+            alt="Graphic"
+            data-aos="fade-left"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- Impact Stats Section -->
     <section class="impact-stats-section">
       <div class="stats-container">
-        <div class="stat" id="stat1">
-          <h1 class="stat-scroll-title text-white">Data Driven</h1>
-          <i class="fas fa-chart-line text-secondary text-white fa-10x"></i>
-          <p class="stat-description">
-            We track dozens of metrics for every child.
-          </p>
-        </div>
-        <div class="stat" id="stat2">
-          <h1 class="stat-scroll-title text-white">
-            Teaching at the Right Level
-          </h1>
-
-          <i class="fas fa-hands-helping text-secondary text-white fa-10x"></i>
-
-          <p class="stat-description">
-            We work one-on-one or in small groups with children at their level.
-          </p>
-        </div>
-        <div class="stat z-1" id="stat3">
-          <h1 class="stat-scroll-title text-white">Impact</h1>
-          <h2 class="stat-number text-white">2X</h2>
-          <p class="stat-description">
-            We more than double the number of readers in every classroom we work
-            with.
-          </p>
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <div class="stat" data-aos="zoom-in" id="stat1">
+              <h1 class="text-white mb-5">High Impact</h1>
+              <img src="images/Graph.png" alt="Data Driven" />
+              <p class="text-white mt-5 p-3">
+                Children on the program learn to read twice as fast as children
+                as their peers. We track over a dozen metrics every six months
+                for each child.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -286,141 +307,6 @@
               Children are participating in our literacy & reading projects in
               2024
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- YOUTH INFO STRIP -->
-
-    <div class="full-width-section">
-      <img
-        src="images/Website Strip Community jobs 2 (sml).png"
-        alt="Smiling Girl"
-        class="full-strip-img"
-      />
-      <div class="text-content flex-column">
-        <h1 class="top-strip-stat">316</h1>
-        <p class="top-strip-text">Community Jobs Created</p>
-      </div>
-    </div>
-    <!-- text After Strip -->
-    <section class="child-info-strip">
-      <div class="container mt-6">
-        <div class="row">
-          <div class="col-md-5 offset-md-1">
-            <h2>Community Jobs</h2>
-            <h6>Empowering a community to uplift itself.</h6>
-            <h6>Local jobs in local schools.</h6>
-            <a href="" class="btn btn-primary btn-block custom-btn-width mt-3"
-              >Video</a
-            ><br />
-            <a href="" class="btn btn-primary btn-block custom-btn-width mt-3"
-              >Data Portal</a
-            >
-          </div>
-
-          <div class="col-md-5">
-            <p>
-              We create jobs for previously unemployed community youth and put
-              them to work in libraries and literacy centers that we build in
-              impoverished early childhood development centres, preschools, and
-              primary schools.
-            </p>
-            <p>
-              Using proven methodologies, our literacy coaches provide children
-              with one-on-one literacy coaching for the first 5-7 years of their
-              schooling life. All day. Every day.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats Under Strip -->
-      <div class="container mid-stats">
-        <div class="row my-6">
-          <div class="col-md-3 col-sm-6 text-center">
-            <h2 class="counter stat-text" data-target="89">89%</h2>
-            <p>of our jobs go to women.</p>
-          </div>
-
-          <div class="col-md-3 col-sm-6 text-center border-start">
-            <h2 class="counter stat-text" data-target="1102">1102</h2>
-            <p>Previously unemployed youth have received jobs</p>
-          </div>
-
-          <div class="col-md-3 col-sm-6 text-center border-start">
-            <h2 class="counter stat-text" data-target="43%">1</h2>
-            <p>Highest youth unemployment rate in the world.</p>
-          </div>
-
-          <div class="col-md-3 col-sm-6 text-center border-start">
-            <h2 class="counter stat-text" data-target="75">75%</h2>
-            <p>of South Africans are unemployed.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCHOLARSHIP STRIP -->
-    <div class="full-width-section">
-      <img
-        src="images/Website Strip - TL.png"
-        alt="Smiling Girl"
-        class="full-strip-img"
-      />
-      <div class="text-content flex-column">
-        <h1 class="top-strip-stat">454</h1>
-        <p class="top-strip-text">University Graduates</p>
-      </div>
-    </div>
-    <!-- text After Strip -->
-    <section class="child-info-strip">
-      <div class="container mt-6">
-        <div class="row">
-          <div class="col-md-5 offset-md-1">
-            <h2>Scholarship Fund</h2>
-            <h6>Investing in a generation of future leaders.</h6>
-            <a href="" class="btn btn-danger btn-block custom-btn-width mt-3"
-              >Video</a
-            >
-          </div>
-
-          <div class="col-md-5">
-            <p>
-              What would happen if you flooded South Africa's most impoverished
-              communities with university graduates?
-            </p>
-            <p>We are going to find out.</p>
-            <p>
-              These young leaders are becoming empowered to uplift their own
-              families, solve their own community's problems, and to serve as
-              role models to other youth.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats Under Strip -->
-      <div class="container bottom-stats">
-        <div class="row my-6">
-          <div class="col-md-3 col-sm-6 text-center">
-            <h2 class="counter stat-text" data-target="10,000">10,000+</h2>
-            <p>High school learners assisted</p>
-          </div>
-
-          <div class="col-md-3 col-sm-6 text-center border-start">
-            <h2 class="counter stat-text" data-target="88%">88%</h2>
-            <p>Pass-rate</p>
-          </div>
-
-          <div class="col-md-3 col-sm-6 text-center border-start">
-            <h2 class="counter stat-text" data-target="43%">259</h2>
-            <p>Employed graduates</p>
-          </div>
-
-          <div class="col-md-3 col-sm-6 text-center border-start">
-            <h2 class="counter stat-text" data-target="18756">1000</h2>
-            <p>University graduates by 2028</p>
           </div>
         </div>
       </div>
@@ -644,153 +530,6 @@
       </div>
     </div>
 
-    <!-- Reasons Section -->
-    <section class="reasons py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Reasons to Partner with Masi</h2>
-
-        <div class="row g-4">
-          <div class="col-sm-4">
-            <div class="card card-flip h-100">
-              <div class="card-front text-center">
-                <div class="card-body">
-                  <i class="fas fa-chart-line fa-3x mb-3"></i>
-                  <h3 class="card-title">Impact</h3>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back bg-white">
-                <div class="card-body">
-                  <h3 class="card-title">Back</h3>
-                  <p class="card-text">
-                    Suprise this one has more more more more content on the
-                    back!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-sm-4">
-            <div class="card card-flip h-100">
-              <div class="card-front">
-                <div class="card-body text-center">
-                  <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                  <h3 class="card-title">Innovation</h3>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="card-body">
-                  <h3 class="card-title">Back #2</h3>
-                  <p class="card-text">
-                    Suprise this one has content on the back!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-sm-4">
-            <div class="card card-flip h-100">
-              <div class="card-front">
-                <div class="card-body text-center">
-                  <i class="fas fa-hands-helping fa-3x mb-3"></i>
-                  <h3 class="card-title">Collaboration</h3>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="card-body">
-                  <h3 class="card-title">Back #2</h3>
-                  <p class="card-text">
-                    Suprise this one has content on the back!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div class="col-sm-4">
-            <div class="card card-flip h-100">
-              <div class="card-front">
-                <div class="card-body text-center">
-                  <i class="fas fa-users fa-3x mb-3"></i>
-                  <h3 class="card-title">Community</h3>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="card-body">
-                  <h3 class="card-title">Back #2</h3>
-                  <p class="card-text">
-                    Suprise this one has content on the back!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card 5 -->
-          <div class="col-sm-4">
-            <div class="card card-flip h-100">
-              <div class="card-front">
-                <div class="card-body text-center">
-                  <i class="fas fa-chart-pie fa-3x mb-3"></i>
-                  <h3 class="card-title">Data Driven</h3>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="card-body">
-                  <h3 class="card-title">Back #2</h3>
-                  <p class="card-text">
-                    Suprise this one has content on the back!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div class="col-sm-4">
-            <div class="card card-flip h-100">
-              <div class="card-front">
-                <div class="card-body text-center">
-                  <i class="fas fa-globe-africa fa-3x mb-3"></i>
-                  <h3 class="card-title">Scalability</h3>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="card-body">
-                  <h3 class="card-title">Back #2</h3>
-                  <p class="card-text">
-                    Suprise this one has content on the back!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- New Cards Section -->
     <section class="reasons-to-partner py-5">
       <div class="container">
@@ -800,8 +539,8 @@
           <div class="col-sm-4">
             <div class="custom-card h-100">
               <div class="card-body text-center">
-                <i class="fas fa-chart-line fa-3x mb-3"></i>
-                <h3 class="card-title">Impact</h3>
+                <i class="fas fa-hands-helping fa-3x mb-3"></i>
+                <h3 class="card-title">Collaboration</h3>
                 <p class="card-text">
                   With supporting text below as a natural lead-in to additional
                   content.
@@ -809,12 +548,11 @@
               </div>
             </div>
           </div>
-          <!-- Card 2 -->
           <div class="col-sm-4">
             <div class="custom-card h-100">
               <div class="card-body text-center">
-                <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                <h3 class="card-title">Innovation</h3>
+                <i class="fas fa-hands-helping fa-3x mb-3"></i>
+                <h3 class="card-title">Collaboration</h3>
                 <p class="card-text">
                   With supporting text below as a natural lead-in to additional
                   content.
@@ -822,7 +560,6 @@
               </div>
             </div>
           </div>
-          <!-- Card 3 -->
           <div class="col-sm-4">
             <div class="custom-card h-100">
               <div class="card-body text-center">
@@ -1040,7 +777,14 @@
 
     <!-- ... existing scripts ... -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation happens only once
+      });
+    </script>
   </body>
 </html>

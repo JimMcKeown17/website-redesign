@@ -9,9 +9,9 @@
 
 /* Navbar Styling */
 #navbar {
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-  transition: background-color 0.5s ease; /* Smooth transition */
-  backdrop-filter: blur(10px); /* Optional: Adds a blur effect behind the navbar */
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
+  transition: background-color 0.5s ease;
+  color: white; /* Smooth transition */
 }
 
 #navbar.scrolled {
@@ -444,7 +444,7 @@ flip card
 
 .impact-stats-section {
   position: relative;
-  height: 300vh;
+  height: 100vh;
   overflow: hidden;
   background-image: url("../images/Strip - Child.jpg");
   background-size: cover;
@@ -452,27 +452,35 @@ flip card
   background-attachment: fixed; /* Keeps the background image fixed */
 }
 
-.stats-container {
-  position: relative;
-  width: 100%;
-  height: 300vh;
+.impact-stats-section .stats-container {
+  height: 100%; /* Ensure container takes full height */
+  display: flex;
+  align-items: stretch; /* Make children stretch to parent's height */
 }
 
-.stat {
-  position: fixed; /* Changed from fixed to absolute */
-  top: 50%; /* Initial positioning */
-  left: 70%;
-  transform: translate(-50%, -50%);
+.impact-stats-section .row {
+  width: 100%;
+  height: 100vh; /* Ensure the row takes the full height of the viewport */
+}
+
+.impact-stats-section .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+}
+
+.impact-stats-section .stat {
   text-align: center;
+  position: relative;
   color: white;
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
   width: 100%; /* Ensure it spans the container */
   box-sizing: border-box;
+  z-index: 2;
 }
 
-.stat-scroll-title {
-  font-size: 4rem !important;
+.stat img {
+  transform: scale(1.25);
+  margin: 20px 0px;
 }
 
 .stat-number {
@@ -495,11 +503,6 @@ flip card
     font-size: 1rem;
   }
 }
-.impact-stats-section {
-  position: relative;
-  z-index: 1;
-}
-
 .child-info-strip {
   position: relative;
   z-index: 2;
@@ -562,10 +565,9 @@ flip card
 }
 .staff-container > div {
   flex: 0 0 120px;
-  border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 1px 5px 15px #1e0e3e;
+  box-shadow: 1px 1px 5px #1e0e3e;
   position: relative;
   overflow: hidden;
 }
@@ -643,10 +645,9 @@ flip card
 }
 .staff-container-3 > div {
   flex: 0 0 120px;
-  border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 1px 5px 15px #1e0e3e;
+  box-shadow: 1px 1px 5px #1e0e3e;
   position: relative;
   overflow: hidden;
 }
@@ -712,4 +713,13 @@ flip card
 }
 .staff-container-3 .staff-container:hover > h2 {
   color: white;
+}
+
+.vid-subtitle {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+}
+
+.vid-title {
+  line-height: 1;
 }

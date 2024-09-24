@@ -1,0 +1,14 @@
+/* Graphic and text initial hidden state */
+.graphic-section,
+.text-section {
+  opacity: 0;
+  transform: translateX(-50px); /* Initial translation for the fade-in effect */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
+}
+
+/* When the section becomes visible during scroll, apply these styles */
+.scroll-visible .graphic-section,
+.scroll-visible .text-section {
+  opacity: 1;
+  transform: translateX(0); /* Reset translation when visible */
+}
