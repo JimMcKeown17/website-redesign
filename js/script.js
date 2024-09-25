@@ -61,9 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  window.addEventListener('scroll', updateStats);
-  updateStats(); // Initial call to set correct state on page load
-
   // -- About Us Image Track (New Code) --
 
   const track = document.getElementById('image-track');
@@ -130,19 +127,29 @@ document.addEventListener('DOMContentLoaded', function () {
   // Handle touch move event for mobile
   window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
-  // Scroll-based fade-in for content
-
-  function handleScroll() {
-    fadeInElements.forEach((element) => {
-      const rect = element.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        element.classList.add('visible');
-      }
-    });
-  }
-
-  // Listen for scroll event outside image track logic
-  window.addEventListener('scroll', handleScroll);
-
   // -- End of About Us Image Track --
+
+  var typed = new Typed('#problem-text', {
+    strings: [
+      'That 81% of children in South Africa cannot read.',
+      'Or that South Africa has the highest youth unemployment rate in the world.',
+      'We are solving both of those problems.',
+    ],
+    typeSpeed: 50, // Speed of typing
+    backSpeed: 12, // Speed of deleting text
+    backDelay: 1000, // Delay before deleting the sentence
+    startDelay: 1500, // Delay before starting the typing animation
+    loop: true, // Loop the animation
+    loopCount: Infinity, // Repeat forever
+    showCursor: true, // Show cursor at the end of the typed text
+    cursorChar: '|', // Customize the cursor character
+  });
+
+  var typed = new Typed('#know', {
+    strings: ['Did You Know?'],
+    typeSpeed: 60, // Speed of typing
+    startDelay: 500, // Start after 500ms delay
+    loop: false, // No looping or deleting
+    showCursor: false, // No blinking cursor
+  });
 });
