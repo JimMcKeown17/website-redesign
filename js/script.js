@@ -61,6 +61,74 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Original Working Particles.js initialization
+  // particlesJS('particles-js', {
+  //   particles: {
+  //     number: {
+  //       value: 80,
+  //     },
+  //     shape: {
+  //       type: 'circle', // You can change this to "image" for custom shapes
+  //     },
+  //     size: {
+  //       value: 3,
+  //     },
+  //     line_linked: {
+  //       enable: true,
+  //     },
+  //     move: {
+  //       speed: 2,
+  //     },
+  //   },
+  // });
+
+  // Initialize particles.js with 0 particles to start
+  particlesJS('particles-js', {
+    particles: {
+      number: {
+        value: 0, // Start with 0 particles
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      // shape: {
+      //   type: 'image',
+      //   image: {
+      //     src: 'images/book.svg', // Use a valid book SVG
+      //     width: 10,
+      //     height: 10,
+      //   },
+      // },
+      size: {
+        value: 10, // Size of the book icons
+      },
+      move: {
+        enable: true,
+        speed: 3, // Speed of particle movement
+        random: true,
+        straight: false,
+        out_mode: 'bounce',
+      },
+      line_linked: {
+        enable: false,
+      },
+    },
+    interactivity: {
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push', // Add particles on click
+        },
+      },
+      modes: {
+        push: {
+          particles_nb: 10, // Number of particles to add on each click
+        },
+      },
+    },
+  });
+
   // -- About Us Image Track (New Code) --
 
   const track = document.getElementById('image-track');

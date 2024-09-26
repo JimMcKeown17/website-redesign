@@ -742,3 +742,34 @@ flip card
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+#particles-js {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#particles-js::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/Map of Qaqawuli.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.5; /* Opacity for the image */
+}
+
+#particles-js::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: -1;
+}

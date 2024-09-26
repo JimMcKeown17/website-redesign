@@ -1,112 +1,49 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Stat counter animation
-  const counters = document.querySelectorAll('.counter');
-  const speed = 200;
-
-  const animateCounter = (counter) => {
-    const target = counter.getAttribute('data-target');
-    const isPercentage = target.includes('%');
-    const isX = target.includes('X');
-    let count = 0;
-
-    const updateCount = () => {
-      const targetNum = parseInt(target.replace('%', '').replace('X', ''));
-      const increment = targetNum / speed;
-
-      if (count < targetNum) {
-        count += increment;
-        if (isPercentage) {
-          counter.innerText = Math.ceil(count) + '%';
-        } else if (isX) {
-          counter.innerText = Math.ceil(count) + 'X';
-        } else {
-          counter.innerText = Math.ceil(count);
-        }
-        setTimeout(updateCount, 10);
-      } else {
-        counter.innerText = target;
-      }
-    };
-
-    updateCount();
-  };
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1,
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  counters.forEach((counter) => {
-    observer.observe(counter);
+  particlesJS('particles-js', {
+    particles: {
+      number: {
+        value: 0, // Start with 0 particles
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      shape: {
+        type: 'image',
+        image: {
+          src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Book_icon.svg/1024px-Book_icon.svg.png', // Use a valid book SVG
+          width: 100,
+          height: 100,
+        },
+      },
+      size: {
+        value: 20,
+      },
+      move: {
+        enable: true,
+        speed: 3,
+        random: true,
+        straight: false,
+        out_mode: 'bounce',
+      },
+      line_linked: {
+        enable: false,
+      },
+    },
+    interactivity: {
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push',
+        },
+      },
+      modes: {
+        push: {
+          particles_nb: 10,
+        },
+      },
+    },
   });
 
-  // Scroll-based navbar behavior
-  const navbar = document.getElementById('navbar');
-
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-
-  // Scroll-based stats opacity update
-  const section = document.querySelector('.impact-stats-section');
-  const stats = document.querySelectorAll('.stat');
-  const sectionHeight = section.offsetHeight;
-
-  function updateStats() {
-    const scrollPosition = window.pageYOffset;
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionScrolled = scrollPosition - sectionTop;
-
-    if (sectionScrolled >= 0 && sectionScrolled <= sectionHeight) {
-      const progress = sectionScrolled / sectionHeight;
-
-      stats.forEach((stat, index) => {
-        const startPoint = index / stats.length;
-        const endPoint = (index + 1) / stats.length;
-
-        if (progress >= startPoint && progress < endPoint) {
-          stat.style.opacity = 1;
-        } else {
-          stat.style.opacity = 0; // Hide stats not in view
-        }
-      });
-    } else {
-      // Hide all stats when outside the section
-      stats.forEach((stat) => {
-        stat.style.opacity = 0;
-      });
-    }
-  }
-
-  window.addEventListener('scroll', updateStats);
-  updateStats(); // Initial call to set correct state on page load
-
-  function handleScroll() {
-    fadeInElements.forEach((element) => {
-      const rect = element.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        element.classList.add('visible');
-      }
-    });
-  }
-
-  // Listen for scroll event outside image track logic
-  window.addEventListener('scroll', handleScroll);
-
-  // -- End of About Us Image Track --
+  console.log('Particles initialized with 0 particles, waiting for clicks.');
 });
