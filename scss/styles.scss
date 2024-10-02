@@ -469,7 +469,7 @@ flip card
 }
 
 .zama-image {
-  max-width: 100%; /* Make sure it doesn't exceed the container's width */
+  max-width: 90%;
   height: auto;
 }
 
@@ -1034,4 +1034,69 @@ flip card
 .btn-outline-white:hover {
   background-color: #fff;
   color: #000;
+}
+
+// #testimonials {
+// background-color: #f8f9fa; /* Optional background for the section */
+// }
+
+.testimonial-card {
+  width: 100%;
+  border: none; /* Remove border for a cleaner look */
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.testimonial-card img {
+  border-radius: 10px 0 0 10px; /* Ensure rounded corners on the left */
+}
+
+.testimonial-card .blockquote {
+  font-size: 1.25rem; /* Larger quote text */
+  font-style: italic; /* Italicized quote */
+}
+
+.carousel-item {
+  padding: 10px; /* Add some padding to give the carousel a smoother look */
+}
+
+/* Our Team Section Styles */
+#our-team .team-card {
+  height: 100%;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+#our-team .team-card .card-img-top {
+  height: 75%;
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+#our-team .team-card .card-body {
+  height: 25%;
+  padding-top: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+#our-team .team-card .card-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#our-team .team-card .card-text {
+  margin-bottom: 0;
+}
+
+#our-team .card-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#our-team h5 {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

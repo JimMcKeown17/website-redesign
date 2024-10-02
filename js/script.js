@@ -132,6 +132,8 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+  window.addEventListener('load', initSwiper);
+
   // Floating Stats Data Drive Section
   const stats = document.querySelectorAll('#floating-stats .stat');
   const sectionHeight = document.getElementById('floating-stats').offsetHeight;
