@@ -958,6 +958,7 @@ flip card
   border: none;
   overflow: hidden;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
 }
 
 #our-team .team-card .card-img-top {
@@ -966,6 +967,7 @@ flip card
   object-fit: cover;
   margin: 0;
   padding: 0;
+  border-radius: 0;
 }
 
 #our-team .team-card .card-body {
@@ -1002,6 +1004,7 @@ flip card
 #our-founders .founder-card {
   position: relative;
   overflow: hidden;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
 }
 
 #our-founders .founder-card img {
@@ -1052,4 +1055,9 @@ flip card
 #our-founders .overlay p {
   font-size: 15px;
   line-height: 1.4;
+}
+
+#our-founders .additional-founders {
+  font-size: 13px;
+  font-style: italic;
 }
