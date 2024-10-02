@@ -132,6 +132,40 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+  // Floating Stats Data Drive Section
+  const stats = document.querySelectorAll('#floating-stats .stat');
+  const sectionHeight = document.getElementById('floating-stats').offsetHeight;
+
+  stats.forEach((stat) => {
+    // Random horizontal position
+    const randomLeft = Math.random() * 90; // Prevent overflow
+    stat.style.left = randomLeft + '%';
+
+    // Random font size
+    const randomFontSize = Math.random() * 10 + 14;
+    stat.style.fontSize = randomFontSize + 'px';
+
+    // Animate upward
+    gsap.fromTo(
+      stat,
+      { y: sectionHeight, opacity: 0 },
+      {
+        y: -50,
+        opacity: 1,
+        duration: Math.random() * 10 + 10,
+        delay: Math.random() * 5,
+        repeat: -1,
+        ease: 'linear',
+        onRepeat: function () {
+          // Randomize position and duration on each repeat
+          stat.style.left = Math.random() * 90 + '%';
+          stat.style.fontSize = Math.random() * 10 + 14 + 'px';
+          this.duration(Math.random() * 10 + 10);
+        },
+      }
+    );
+  });
+
   // -- About Us Image Track (New Code) --
 
   const track = document.getElementById('image-track');
