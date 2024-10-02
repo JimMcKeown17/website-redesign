@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -411,33 +415,123 @@
       </div>
     </section>
 
-    <!-- Founders Section -->
-    <section id="founders" class="py-5">
-      <div class="container text-center">
-        <h2>Our Founders</h2>
-        <div class="row justify-content-center">
-          <div class="col-6 col-md-3 text-center">
-            <img
-              src="founder1.jpg"
-              alt="Founder 1"
-              class="img-fluid rounded-circle mb-2"
-              style="width: 150px; height: 150px"
-            />
-            <p>Founder 1 Name</p>
+    <!-- Our Founders Section -->
+    <section id="our-founders" class="py-5">
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          <!-- Left Column: Title and Story -->
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <h2>Our Founders</h2>
+            <p>
+              Our founders, Jim & Fiks had both achieved relative success in
+              life, albeit on opposite sides of the world. Jim in New York
+              City's Financial District and Fiks in Johannesburg's entertainment
+              industry.
+            </p>
+            <p>
+              The beneficiaries of countless opportunities and the love and
+              sacrifice of many, both felt called to give back.
+            </p>
+            <p>
+              In 2008, they met in New Brighton, Gqeberha, and soon after,
+              Masinyusane was born.
+            </p>
           </div>
-          <div class="col-6 col-md-3 text-center">
-            <img
-              src="founder2.jpg"
-              alt="Founder 2"
-              class="img-fluid rounded-circle mb-2"
-              style="width: 150px; height: 150px"
-            />
-            <p>Founder 2 Name</p>
+
+          <!-- Founder 1 -->
+          <div class="col-md-4">
+            <div class="founder-card">
+              <img
+                src="images/staff/Jim McKeown.jpg"
+                alt="Founder 1"
+                class="img-fluid"
+              />
+              <div class="overlay">
+                <div class="overlay-content">
+                  <h5 class="text-white">Jim McKeown</h5>
+                  <p>
+                    ​Jim arrived in Gqeberha from New York in 2008 after leaving
+                    behind a promising career on Wall Street. He possesses an MA
+                    in Development Studies (Nelson Mandela University), a BSc in
+                    Operations & Research Engineering (Columbia University, NY),
+                    and a BA in Computer Engineering (Fairfield University, CT).
+                  </p>
+                  <br />
+                  <p>
+                    What drove Jim to come to South Africa was to be able to
+                    provide the same type of opportunities for others that he
+                    received growing up in the United States. Upon arriving, he
+                    met some amazing people (see Fiks) who shared the same
+                    passion and belief in uplifting others through education. ​​
+                  </p>
+                  <br />
+                  <p>
+                    Jim has learned to speak isiXhosa, lived in the townships,
+                    adopted kids, and fallen in love with South Africa.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Founder 2 -->
+          <div class="col-md-4">
+            <div class="founder-card">
+              <img
+                src="images/staff/Ta Fiks Mahola.jpg"
+                alt="Founder 2"
+                class="img-fluid"
+              />
+              <div class="overlay">
+                <div class="overlay-content">
+                  <h5 class="text-white">Fiks Mahola</h5>
+                  <p class="founder-text">
+                    Fiks is the "heart and soul" of Masinyusane. Passionate
+                    about community development, Fiks has been the guiding force
+                    in developing our initiatives, working with family to
+                    identify needs, and engaging with the community to ensure
+                    their involvement.
+                  </p>
+                  <br />
+                  <p>
+                    Fiks also left a promising career, albeit one in
+                    entertainment. He has acted in numerous films and theatre
+                    productions. Most famously, he starred in the role of
+                    "Simphiwe" on South Africa's popular television series 7 de
+                    Laan.
+                  </p>
+                  <br />
+                  <p>
+                    Everyone in our communities knows that Fiks walked away from
+                    a career of fame and success and returned to help uplift
+                    others. He embodies everything Masinyusane represents.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center py-3">
+          <div class="col-md-10 offset-md-1">
+            <p>
+              * Additional founders include Fr Jerry Brown, Thobeka Gaxamba, and
+              Tiksie Mabizela. While not involved in day-to-day operations, they
+              have played a critical role in Masinyusane's growth.
+            </p>
           </div>
         </div>
       </div>
     </section>
   </body>
   <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation happens only once
+    });
+  </script>
   <script src="js/script.js"></script>
 </html>
