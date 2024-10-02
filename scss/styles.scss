@@ -25,6 +25,15 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow when scrolled */
 }
 
+// The following two lines help me transition the color from white to dark on scroll.
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link-white {
+  color: white !important;
+}
+
 .navbar-brand img {
   max-height: 50px; /* Adjust logo size */
 }
@@ -54,11 +63,13 @@
 
 .video-overlay {
   position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-60%, -60%);
+  // max-width: 400px;
+  top: 30%;
+  // left: 20%;
+  // transform: translate(-60%, -60%);
   text-align: left;
   color: white;
+  margin-left: 10px;
 }
 
 .video-overlay h1 {
@@ -66,16 +77,25 @@
   font-size: 4rem;
   margin: 0;
   padding: 0;
+  line-height: 4.2rem;
+  margin-bottom: 50px;
 }
 
-#opportunities {
-  color: red;
+.video-overlay-text {
+  font-size: 1.3rem;
 }
+// #opportunities {
+//   color: red;
+// }
 
 .full-width-section {
   width: 100%;
   height: auto;
   position: relative;
+}
+
+.mission-section {
+  margin: 0 7rem;
 }
 
 // TOP STRIP
@@ -106,11 +126,11 @@
   top: 60%; /* Center vertically */
   left: 25%; /* Center horizontally */
   transform: translate(
-    -50%,
+    -55%,
     -50%
   ); /* Adjust the position back by 50% of its own height and width */
   color: white; /* Ensures the text is visible */
-  text-align: center; /* Centers the text within the text-content box */
+  text-align: left; /* Centers the text within the text-content box */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,6 +143,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 10rem;
+  padding: 1rem;
 }
 
 .top-strip-text {
@@ -130,11 +151,46 @@
   padding: 0px 20px;
 }
 
+.top-strip-stat2 {
+  color: white;
+  font-family: 'Nerko One', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10rem;
+  margin: 0;
+  line-height: 0.7;
+}
+
+.scholarship-stats {
+  color: rgb(42, 42, 42);
+}
+
+.top-strip-stat3 {
+  color: rgb(42, 42, 42);
+  font-family: 'Nerko One', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10rem;
+  margin: 0;
+  line-height: 0.7;
+}
+
 // BUTTONS
 
 .custom-btn-width {
   width: 150px;
   border-radius: 0px;
+}
+
+.btn-outline-yellow {
+  color: #ffc107; /* Bootstrap's yellow color */
+  border: 1px solid #ffc107;
+  background-color: transparent;
+}
+
+.btn-outline-yellow:hover {
+  background-color: #ffc107;
+  color: white;
 }
 
 .top-stats .stat-text {
@@ -152,13 +208,14 @@
   font-size: 3rem;
 }
 // CARD REASONS TO PARTNER
-.reasons {
-  background-color: lightgray;
-}
+// .reasons {
+//   background-color: lightgray;
+// }
 
 /*
 flip card
 */
+
 .card-flip > div {
   backface-visibility: hidden;
   transition: transform 300ms;
@@ -171,6 +228,7 @@ flip card
 
 .card-front {
   transform: rotateY(0deg);
+  color: rgba(var(--bs-dark-rgb));
 }
 
 .card-back {
@@ -201,7 +259,7 @@ flip card
 
 .partner-logo {
   display: inline-block;
-  height: 100px;
+  height: 70px;
   margin: 0 20px;
   filter: grayscale(100%) opacity(0.5);
   transition: filter 0.3s ease;
@@ -415,73 +473,65 @@ flip card
   height: auto;
 }
 
-/* Home Page Reports Section */
-
-.report:hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease-in-out;
-  opacity: 0.8;
-}
-
-.feature-reports {
-  .report-wrapper {
-    display: inline-block;
-    max-width: 100%; /* Ensures the wrapper doesn't exceed the column width */
-  }
-
-  .report {
-    display: inline-block;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    max-width: 100%; /* Ensures the report doesn't exceed the wrapper width */
-  }
-
-  .report-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-  }
-
-  .report-text {
-    text-align: left;
-  }
-
-  .report-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .report-text ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .report-text ul li {
-    font-size: 1rem;
-    color: #28a745;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-}
-
+/* FEATURE REPORTS SECTION */
 .modal-feature-reports {
-  .report-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: relative;
+}
 
-  .report-img {
-    max-width: 80%;
-    height: auto;
-    transition: transform 0.3s ease;
+/* Ensure the right column is tall enough to display the stacked reports */
+.modal-feature-reports .col-md-6.position-relative {
+  min-height: 400px; /* Adjust height as needed */
+}
 
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
+/* Base styles for report-wrapper */
+.report-wrapper {
+  position: absolute;
+  right: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.report-wrapper img {
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  display: block;
+}
+
+/* Hover effect on report-wrapper */
+.report-wrapper:hover {
+  transform: scale(1.1);
+  z-index: 5 !important;
+}
+
+/* Positioning each report to create the staggered effect */
+.report-wrapper.report-1 {
+  top: 0;
+  right: 100px;
+  transform: rotate(5deg);
+}
+
+.report-wrapper.report-2 {
+  top: 30px;
+  right: 225px;
+  transform: rotate(5deg);
+}
+
+.report-wrapper.report-3 {
+  top: 60px;
+  right: 350px;
+  transform: rotate(5deg);
+}
+
+/* Styles specific to modal-feature-reports */
+.modal-feature-reports .report-img {
+  max-width: 80%;
+  height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.modal-feature-reports .report-img:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
