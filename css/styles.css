@@ -1121,3 +1121,60 @@ flip card
 .children .video-player iframe {
   border-radius: 10px;
 }
+
+/* Hero Section */
+.tl-hero-section {
+  background: url("../images/Strip - Graduate.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+/* Hero Section */
+.tl-hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.tl-hero-section p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .tl-hero-section h1 {
+    font-size: 2.5rem;
+  }
+  /* Hero Section */
+  .tl-hero-section p {
+    font-size: 1.2rem;
+  }
+}
+/* Hero Section */
+.youth-hero-section {
+  background: url("../images/Website Strip Community jobs 2 (sml).png") no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+/* Hero Section */
+.youth-hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.youth-hero-section p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .youth-hero-section h1 {
+    font-size: 2.5rem;
+  }
+  /* Hero Section */
+  .youth-hero-section p {
+    font-size: 1.2rem;
+  }
+}
