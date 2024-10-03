@@ -898,7 +898,7 @@ flip card
   background-image: url("../images/black-background.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* Set the opacity here */
+  opacity: 0.35; /* Set the opacity here */
   z-index: 1;
 }
 
