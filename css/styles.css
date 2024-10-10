@@ -583,53 +583,6 @@ flip card
   z-index: 2;
 }
 
-.custom-card {
-  background: none;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.custom-card .card-body {
-  padding: 20px;
-  color: #000; /* Default text color */
-}
-
-.custom-card:hover {
-  background-color: #0066ff; /* Blue background on hover */
-  transform: translateY(-10px); /* Lifts the card */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Adds a shadow for pop-out effect */
-}
-
-.custom-card:hover .card-body {
-  color: #fff; /* Change text color to white on hover */
-}
-
-.custom-card i {
-  font-size: 48px;
-  color: #000; /* Icon default color */
-}
-
-.custom-card:hover i {
-  color: #fff; /* Icon color on hover */
-}
-
-.custom-card .card-title {
-  font-size: 24px;
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-.custom-card:hover .card-title,
-.custom-card:hover .card-text {
-  color: #fff; /* Make text white on hover */
-}
-
-.custom-card .card-text {
-  font-size: 16px;
-}
-
 .staff-container {
   width: 100%;
   display: flex;
@@ -1107,7 +1060,7 @@ flip card
 
 /* Content Section */
 .content-section {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .content-section h2 {
@@ -1176,7 +1129,7 @@ flip card
 }
 /* Hero Section */
 .youth-hero-section {
-  background: url("../images/Website Strip Community jobs 2 (sml).png") no-repeat center center/cover;
+  background: url("../images/youth-1.webp") no-repeat center center/cover;
   height: 100vh;
   color: white;
   text-align: center;
@@ -1185,7 +1138,8 @@ flip card
 /* Hero Section */
 .youth-hero-section h1 {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 40%;
+  color: rgb(243, 242, 242) !important;
 }
 
 /* Hero Section */
@@ -1386,4 +1340,12 @@ flip card
   transform: scale(1);
   transition-delay: 0.5s;
   box-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white;
+}
+
+/* Hero Section */
+.apply-hero-section {
+  background: url("../images/tl-strip-yellow.webp") no-repeat center center/cover;
+  height: 50vh;
+  color: white;
+  text-align: center;
 }
