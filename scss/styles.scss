@@ -115,46 +115,56 @@
 
 .full-strip-img {
   width: 100%; /* Ensures it takes the full width of the parent container */
-  //   max-height: 50vh; /* Restricts the image to a maximum height of 50% of the viewport height */
-  object-fit: contain; /* Adjusts the image to fit within the given dimensions without distortion */
+  object-fit: contain; /* Adjusts the image to fit without distortion */
   display: block;
-  margin: 0 auto; /* Centers the image horizontally */
+  margin: 0 auto;
 }
 
-.text-content {
-  position: absolute; /* Position the text content over the image */
-  top: 60%; /* Center vertically */
-  left: 25%; /* Center horizontally */
-  transform: translate(
-    -55%,
-    -50%
-  ); /* Adjust the position back by 50% of its own height and width */
-  color: white; /* Ensures the text is visible */
-  text-align: left; /* Centers the text within the text-content box */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
+.text-content1 {
+  position: absolute;
+  top: 35%;
+  left: 20%; /* Aligns the text content to the left */
+  transform: translateY(-50%);
+  color: white;
+  text-align: left; /* Aligns the text to the left */
 }
 
 .top-strip-stat {
   color: white;
-  font-family: 'Nerko One', cursive;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
   font-size: 10rem;
-  padding: 1rem;
+  margin: 0;
+}
+
+.top-strip-text-light {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 5px;
+  line-height: 1.7rem;
 }
 
 .top-strip-text {
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  padding: 0px 20px;
+  font-weight: 600;
+  line-height: 1.7rem;
+}
+
+.text-content2 {
+  position: absolute;
+  top: 30%;
+  left: 20%; /* Aligns the text content to the left */
+  transform: translateY(-50%);
+  color: white;
+  text-align: left; /* Aligns the text to the left */
 }
 
 .top-strip-stat2 {
   color: white;
-  font-family: 'Nerko One', cursive;
-  font-weight: 400;
+  font-family: 'Roboto';
+  font-weight: 800;
   font-style: normal;
   font-size: 10rem;
   margin: 0;
@@ -165,10 +175,19 @@
   color: rgb(42, 42, 42);
 }
 
+.text-content3 {
+  position: absolute;
+  top: 50%;
+  left: 20%; /* Aligns the text content to the left */
+  transform: translateY(-50%);
+  color: white;
+  text-align: left; /* Aligns the text to the left */
+}
+
 .top-strip-stat3 {
   color: rgb(42, 42, 42);
-  font-family: 'Nerko One', cursive;
-  font-weight: 400;
+  font-family: 'Roboto';
+  font-weight: 800;
   font-style: normal;
   font-size: 10rem;
   margin: 0;
@@ -235,6 +254,10 @@ flip card
   transform: rotateY(180deg);
   position: absolute;
   top: 0;
+  line-height: 1.2;
+  color: white;
+  background-color: rgba(var(--bs-dark-rgb));
+  transition: 0.2s ease-in-out;
 }
 
 .card-flip:hover .card-front {
@@ -492,7 +515,7 @@ flip card
 }
 
 .report-wrapper img {
-  width: 250px;
+  width: 270px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   display: block;
@@ -508,19 +531,19 @@ flip card
 .report-wrapper.report-1 {
   top: 0;
   right: 100px;
-  transform: rotate(5deg);
+  // transform: rotate(5deg);
 }
 
 .report-wrapper.report-2 {
   top: 30px;
   right: 225px;
-  transform: rotate(5deg);
+  // transform: rotate(5deg);
 }
 
 .report-wrapper.report-3 {
   top: 60px;
   right: 350px;
-  transform: rotate(5deg);
+  // transform: rotate(5deg);
 }
 
 /* Styles specific to modal-feature-reports */
@@ -937,7 +960,7 @@ flip card
 #data-driven-results {
   position: relative;
   width: 100%;
-  height: 500px; /* Adjust the height as needed */
+  height: 800px; /* Adjust the height as needed */
   overflow: hidden;
 }
 
@@ -982,7 +1005,7 @@ flip card
 #floating-stats {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 550px;
   background-color: #202020;
   overflow: hidden;
   display: flex;
@@ -1302,5 +1325,214 @@ flip card
   /* Hero Section */
   .youth-hero-section p {
     font-size: 1.2rem;
+  }
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  background-color: transparent;
+  border: 1px solid #dc3545;
+  padding: 10px 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-outline-danger:hover {
+  color: white;
+}
+
+.btn-outline-danger:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #dc3545;
+  z-index: -1;
+  border-radius: 50% 50% 0% 0%;
+  height: 0%;
+  transition: all 0.5s;
+}
+
+.btn-outline-danger:hover:before {
+  height: 190%;
+}
+
+/* CSS */
+.button-donate {
+  align-items: center;
+  background-color: #dc3545;
+  border: none;
+
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-donate:after {
+  background-color: #3e3e3e;
+  content: '';
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  transform: translate(5px, 5px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button-donate:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-donate:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-donate:hover {
+  outline: 0;
+  background-color: #b81d2c;
+  // transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .button-donate {
+    padding: 0 40px;
+  }
+}
+
+// DATA PORTAL FLOATING STATS BUTTON
+
+.portal-button {
+  a {
+    position: relative;
+    text-decoration: none;
+    // text-transform: uppercase;
+    padding: 15px 30px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 4px;
+    transition: 0.5s;
+
+    &:hover {
+      color: black;
+      border: 2px solid transparent;
+    }
+
+    span {
+      position: absolute;
+      background: white;
+      box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 50px white,
+        0 0 100px white;
+    }
+
+    span:nth-child(1),
+    span:nth-child(3) {
+      width: 7px;
+      height: 4px;
+    }
+
+    span:nth-child(2),
+    span:nth-child(4) {
+      width: 4px;
+      height: 7px;
+    }
+
+    span:nth-child(1) {
+      top: calc(50% - 2px);
+      left: -10px;
+      transition: 0.5s ease-in-out;
+      transform-origin: left;
+      transition-delay: 0.25s;
+    }
+
+    &:hover span:nth-child(1) {
+      left: 50%;
+      transform: scaleX(0);
+      transition-delay: 0s;
+    }
+
+    span:nth-child(3) {
+      top: calc(50% - 2px);
+      right: -10px;
+      transition: 0.5s ease-in-out;
+      transform-origin: right;
+      transition-delay: 0.25s;
+    }
+
+    &:hover span:nth-child(3) {
+      right: 50%;
+      transform: scaleX(0);
+      transition-delay: 0s;
+    }
+
+    span:nth-child(2) {
+      left: calc(50% - 2px);
+      top: -10px;
+      transition: 0.5s ease-in-out;
+      transform-origin: top;
+      transition-delay: 0.25s;
+    }
+
+    &:hover span:nth-child(2) {
+      top: 50%;
+      transform: scaleY(0);
+      transition-delay: 0s;
+    }
+
+    span:nth-child(4) {
+      left: calc(50% - 2px);
+      bottom: -10px;
+      transition: 0.5s ease-in-out;
+      transform-origin: bottom;
+      transition-delay: 0.25s;
+    }
+
+    &:hover span:nth-child(4) {
+      bottom: 50%;
+      transform: scaleY(0);
+      transition-delay: 0s;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      transform: scale(0);
+      transition: 0.5s;
+      z-index: -1;
+    }
+
+    &:hover:before {
+      transform: scale(1);
+      transition-delay: 0.5s;
+      box-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white;
+    }
   }
 }

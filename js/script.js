@@ -147,17 +147,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const randomFontSize = Math.random() * 10 + 14;
     stat.style.fontSize = randomFontSize + 'px';
 
-    // Animate upward
+    // Animate upward with fade in and fade out
     gsap.fromTo(
       stat,
       { y: sectionHeight, opacity: 0 },
       {
-        y: -50,
+        y: -200, // Increase the negative value to make them move out of view completely
         opacity: 1,
         duration: Math.random() * 10 + 10,
         delay: Math.random() * 5,
         repeat: -1,
         ease: 'linear',
+        onUpdate: function () {
+          // Calculate fading out opacity as it moves towards the top
+          const progress = this.progress(); // Gets a value between 0 and 1
+          stat.style.opacity = Math.max(0, 1 - progress);
+        },
         onRepeat: function () {
           // Randomize position and duration on each repeat
           stat.style.left = Math.random() * 90 + '%';
