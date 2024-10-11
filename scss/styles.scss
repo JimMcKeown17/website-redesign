@@ -9,13 +9,18 @@
   --masi-red-2: #ea294c;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Poppins', sans-serif;
 }
 
 $headings-font-family: 'Poppins', sans-serif; // Override heading font family
 
-.light-header{
+.light-header {
   font-weight: 200;
 }
 
@@ -1268,8 +1273,7 @@ flip card
 
 /* Hero Section */
 .youth-hero-section {
-  background: url('../images/youth-1.webp')
-    no-repeat center center/cover;
+  background: url('../images/youth-1.webp') no-repeat center center/cover;
   height: 100vh;
   color: white;
   text-align: center;
@@ -1511,8 +1515,8 @@ flip card
 
 /* Hero Section */
 .apply-hero-section {
-  background: url('../images/tl-strip-yellow.webp')
-    no-repeat center center/cover;
+  background: url('../images/tl-strip-yellow.webp') no-repeat center
+    center/cover;
   height: 50vh;
   color: white;
   text-align: center;
