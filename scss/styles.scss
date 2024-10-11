@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
   --masi-red: #ff0000;
@@ -6,6 +7,23 @@
   --masi-yellow: #ffde5f;
   --masi-green: green;
   --masi-red-2: #ea294c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+$headings-font-family: 'Poppins', sans-serif; // Override heading font family
+
+.light-header{
+  font-weight: 200;
+}
+
+@media (min-width: 1440px) and (max-width: 1919.98px) {
+  .row {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 /* Navbar Styling */
@@ -63,13 +81,14 @@
 
 .video-overlay {
   position: absolute;
+  width: 100vw;
   // max-width: 400px;
   top: 30%;
   // left: 20%;
   // transform: translate(-60%, -60%);
   text-align: left;
   color: white;
-  margin-left: 10px;
+  // margin-left: 10px;
 }
 
 .video-overlay h1 {
@@ -94,9 +113,9 @@
   position: relative;
 }
 
-.mission-section {
-  margin: 0 7rem;
-}
+// .mission-section {
+//   margin: 0 7rem;
+// }
 
 // TOP STRIP
 
