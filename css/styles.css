@@ -870,6 +870,10 @@ flip card
   font-size: 1.2em;
 }
 
+.desc-box {
+  max-width: 500px;
+}
+
 #floating-stats {
   position: relative;
   width: 100%;
