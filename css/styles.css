@@ -445,6 +445,32 @@ flip card
     transform: translateX(-50%);
   }
 }
+.about-youth {
+  /* Image Container */
+  /* Images */
+  /* Hover Effect */
+}
+.about-youth .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 15px; /* Adjust the gap between images */
+}
+.about-youth .image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.about-youth .image-container img {
+  width: 100%;
+  height: 150px; /* Set a consistent height */
+  object-fit: cover;
+}
+.about-youth .image-container:hover {
+  transform: scale(1.2); /* Enlarge image on hover */
+  z-index: 10;
+}
+
 #executive .col-md-3 {
   max-width: 100%; /* Allow the image container to be as wide as needed */
 }
@@ -956,6 +982,7 @@ flip card
   overflow: hidden;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
   border-radius: 0;
+  transition: 0.3s ease-in-out;
 }
 
 #our-team .team-card .card-img-top {
@@ -993,11 +1020,11 @@ flip card
   padding-bottom: 0;
 }
 
-/* Our Founders Section Styles */
-#our-founders {
-  background-color: #f8f9fa; /* Optional background color */
+#our-team .team-card:hover {
+  transform: translateY(-10px);
 }
 
+/* Our Founders Section Styles */
 #our-founders .founder-card {
   position: relative;
   overflow: hidden;
@@ -1050,7 +1077,7 @@ flip card
 }
 
 #our-founders .overlay p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
