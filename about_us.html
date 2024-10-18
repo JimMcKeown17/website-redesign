@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/lightbox.min.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <!-- AOS CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
@@ -550,6 +552,24 @@
         </p>
       </div>
     </section> -->
+    <section class="youth-jobs-chart py-5 bg-gray-strip">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-center">
+            <p class="lead">
+              Over the past decade, we have created jobs for
+              <span class="text-danger fw-bold font-stat-lg">1,318</span>
+              <span class="text-danger fw-bold font-stat-lg">women</span> from
+              the community.
+            </p>
+          </div>
+          <div class="col-md-8">
+            <div id="youth-jobs-chart"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer bg-dark text-light py-5">
       <div class="container fw-light">
         <div class="row">
@@ -643,10 +663,10 @@
         </div>
       </div>
     </footer>
+    <!-- Plotly Chart -->
+    <script src="js/plotly-chart.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- Plotly Map -->
-    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

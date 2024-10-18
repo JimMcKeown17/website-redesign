@@ -469,45 +469,11 @@ flip card
   overflow: hidden;
 }
 
-// About Us Scroll Photos
-.scroll-container {
-  overflow: hidden; /* Prevent vertical scrolling */
-  white-space: nowrap; /* Ensure all content stays in a single line */
-  width: 100%; /* Take up full width of the parent container */
-}
-
-.scroll-content {
-  display: inline-block; /* Keep the content in a horizontal line */
-  white-space: nowrap; /* Ensure no line breaks between images */
-  animation: scroll 30s linear infinite; /* Add the scrolling animation */
-}
-
-.scroll-content-reverse {
-  animation: scroll 30s linear infinite reverse;
-}
-
-.scroll-content-fast {
-  animation-duration: 60s;
-}
-
-.scroll-content-slow {
-  animation-duration: 80s;
-}
-
 .gallery-img {
   height: 200px; /* Adjust image height */
   display: inline-block; /* Ensure images stay in a single line */
   margin-right: 10px; /* Add some space between images */
   vertical-align: middle; /* Align images properly */
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
 
 .about-youth {
@@ -553,6 +519,12 @@ flip card
   height: auto;
 }
 
+#youth-jobs-chart {
+  margin-left: 20px;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+}
 /* FEATURE REPORTS SECTION */
 .modal-feature-reports {
   position: relative;
