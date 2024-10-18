@@ -1535,3 +1535,8 @@ flip card
     font-size: 2rem;
   }
 }
+
+.carousel-item img {
+  height: 500px;
+  width: 100%;
+}

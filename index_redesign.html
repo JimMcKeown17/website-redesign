@@ -376,136 +376,90 @@
       </div>
     </section>
 
-    <section id="testimonials" class="py-5">
+    <!-- Meet Some Graduates Section -->
+    <section class="meet-graduates my-5">
       <div class="container">
-        <div class="row">
-          <!-- Left Column: Title and Paragraph -->
-          <div class="col-md-6 d-flex flex-column justify-content-center">
-            <h2 class="mb-4">Testimonials</h2>
-            <p>
-              Hear from those who have worked closely with us. Our partners have
-              seen firsthand the impact we create in improving literacy and
-              education across communities.
-            </p>
+        <div class="row align-items-center">
+          <!-- Left Column -->
+          <div class="col-md-4 col-12 mb-4 mb-md-0">
+            <h2 class="display-5 fw-bold">Meet Some Graduates</h2>
           </div>
-
-          <!-- Right Column: Sliding Testimonial Cards -->
-          <div class="col-md-6">
+          <!-- Right Column (Carousel) -->
+          <div class="col-md-8 col-12">
             <div
-              id="testimonialCarousel"
+              id="graduatesCarousel"
               class="carousel slide"
               data-bs-ride="carousel"
             >
+              <!-- Indicators/Dots -->
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#graduatesCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#graduatesCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#graduatesCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#graduatesCarousel"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <!-- Carousel Inner -->
               <div class="carousel-inner">
-                <!-- Testimonial 1 -->
+                <!-- Slide 1 -->
                 <div class="carousel-item active">
-                  <div class="card testimonial-card">
-                    <div class="row g-0">
-                      <!-- Left: Image -->
-                      <div class="col-md-6">
-                        <img
-                          src="images/quote - esethu.png"
-                          alt="Person 1"
-                          class="img-fluid rounded-start"
-                          style="height: 100%; object-fit: cover"
-                        />
-                      </div>
-                      <!-- Right: Quote, Name, and Title -->
-                      <div
-                        class="col-md-6 d-flex flex-column justify-content-center"
-                      >
-                        <div class="card-body">
-                          <blockquote class="blockquote">
-                            <p class="mb-4">
-                              "Working with Masinyusane has been a
-                              transformative experience. Their data-driven
-                              approach ensures maximum impact for every child
-                              they support."
-                            </p>
-                          </blockquote>
-                          <h5 class="mb-0">Esethu</h5>
-                          <small class="text-muted">CEO, Company X</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src="images/grads/grad-carousel1.png"
+                    class="d-block w-100"
+                    alt="Graduate 1"
+                  />
                 </div>
-
-                <!-- Testimonial 2 -->
+                <!-- Slide 2 -->
                 <div class="carousel-item">
-                  <div class="card testimonial-card">
-                    <div class="row g-0">
-                      <!-- Left: Image -->
-                      <div class="col-md-6">
-                        <img
-                          src="images/quote-azama.png"
-                          alt="Person 2"
-                          class="img-fluid rounded-start"
-                          style="height: 100%; object-fit: cover"
-                        />
-                      </div>
-                      <!-- Right: Quote, Name, and Title -->
-                      <div
-                        class="col-md-6 d-flex flex-column justify-content-center"
-                      >
-                        <div class="card-body">
-                          <blockquote class="blockquote">
-                            <p class="mb-4">
-                              "The dedication and passion of the Masinyusane
-                              team are truly inspiring. They have changed the
-                              lives of so many children."
-                            </p>
-                          </blockquote>
-                          <h5 class="mb-0">Jane Smith</h5>
-                          <small class="text-muted"
-                            >Program Director, Nonprofit Y</small
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src="images/grads/grad-carousel2.png"
+                    class="d-block w-100"
+                    alt="Graduate 2"
+                  />
                 </div>
-
-                <!-- Testimonial 3 -->
+                <!-- Slide 3 -->
                 <div class="carousel-item">
-                  <div class="card testimonial-card">
-                    <div class="row g-0">
-                      <!-- Left: Image -->
-                      <div class="col-md-6">
-                        <img
-                          src="images/quote-amlindile.png"
-                          alt="Person 3"
-                          class="img-fluid rounded-start"
-                          style="height: 100%; object-fit: cover"
-                        />
-                      </div>
-                      <!-- Right: Quote, Name, and Title -->
-                      <div
-                        class="col-md-6 d-flex flex-column justify-content-center"
-                      >
-                        <div class="card-body">
-                          <blockquote class="blockquote">
-                            <p class="mb-4">
-                              "Their results speak for themselves. Masinyusane
-                              is at the forefront of educational change."
-                            </p>
-                          </blockquote>
-                          <h5 class="mb-0">Michael Lee</h5>
-                          <small class="text-muted"
-                            >Head of Education, Organization Z</small
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src="images/grads/grad-carousel3.png"
+                    class="d-block w-100"
+                    alt="Graduate 3"
+                  />
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                  <img
+                    src="images/grads/grad-carousel4.png"
+                    class="d-block w-100"
+                    alt="Graduate 4"
+                  />
                 </div>
               </div>
-
-              <!-- Carousel Controls -->
+              <!-- Controls/Arrows -->
               <button
                 class="carousel-control-prev"
                 type="button"
-                data-bs-target="#testimonialCarousel"
+                data-bs-target="#graduatesCarousel"
                 data-bs-slide="prev"
               >
                 <span
@@ -517,7 +471,7 @@
               <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#testimonialCarousel"
+                data-bs-target="#graduatesCarousel"
                 data-bs-slide="next"
               >
                 <span
