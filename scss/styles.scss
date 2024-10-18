@@ -611,6 +611,22 @@ flip card
   }
 }
 
+.the-solution {
+  ul {
+    margin-top: 50px;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.solution-model {
+  max-height: 500px;
+}
+
 .iframe {
   border: none;
   height: 100vh;
@@ -1643,7 +1659,7 @@ flip card
 }
 
 .problem-1 {
-  max-width: 70%;
+  max-width: 50%;
 }
 
 .impact-stats-new {
