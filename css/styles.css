@@ -465,6 +465,19 @@ flip card
 }
 
 /* FEATURE REPORTS SECTION */
+.modal-feature-reports::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/black-background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35; /* Set the opacity here */
+}
+
 .modal-feature-reports {
   position: relative;
 }
@@ -479,7 +492,7 @@ flip card
   position: absolute;
   right: 0;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  z-index: 1;
+  z-index: 3;
 }
 
 .report-wrapper img {
@@ -487,6 +500,7 @@ flip card
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   display: block;
+  z-index: 5;
 }
 
 /* Hover effect on report-wrapper */
@@ -883,7 +897,7 @@ flip card
   position: relative;
   width: 100%;
   height: 550px;
-  background-color: #202020;
+  background-color: rgba(var(--bs-dark-rgb));
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -1378,6 +1392,9 @@ flip card
   padding: 0;
   line-height: 4.2rem;
 }
+.hero-section-new .first-column {
+  border-bottom: 2px solid #3e3e3e;
+}
 .hero-section-new p {
   margin-top: 0;
   padding-top: 0;
@@ -1445,5 +1462,63 @@ flip card
 @media (max-width: 991.98px) {
   #AR2 .display-4 {
     font-size: 2.5rem;
+  }
+}
+
+.eastern-cape-strip .background-image-ec {
+  background-image: url("../images/Eastern-Cape-3.JPG");
+  background-size: 100%; /* Adjusts the image to fit within the container */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.problem-1 {
+  max-width: 70%;
+}
+
+.impact-stats-new {
+  background-image: url("../images/children-run-school.jpg");
+  background-size: 100%; /* Adjusts the image to fit within the container */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat;
+  height: 800px; /* Prevents the image from repeating */
+}
+.impact-stats-new .impact-background {
+  background-image: url("path-to-your-background-image.jpg"); /* Replace with your image path */
+  width: 100%;
+  height: 100%;
+}
+.impact-stats-new .impact-stats-new .container {
+  position: relative;
+  z-index: 2;
+}
+.impact-stats-new .impact-stats-new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  z-index: 1;
+}
+.impact-stats-new .stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.impact-stats-new .stat-text {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  color: rgba(var(--bs-dark-rgb));
+}
+@media (max-width: 767.98px) {
+  .impact-stats-new .impact-stats-new {
+    height: auto;
+    padding: 50px 0;
+  }
+  .impact-stats-new .stat-number {
+    font-size: 2rem;
   }
 }

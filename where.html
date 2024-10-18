@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -13,11 +19,99 @@
     <title>Document</title>
   </head>
   <body>
+    <section class="eastern-cape-strip">
+      <!-- Annual Report Highlight Strip -->
+      <div class="container-fluid p-0">
+        <div class="position-relative text-center text-white">
+          <!-- Background Image Div -->
+          <div class="background-image-ec w-100" style="height: 500px">
+            <!-- Overlay -->
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+              style="background-color: rgba(0, 0, 0, 0.3)"
+            >
+              <!-- Headline -->
+              <h1 class="display-4 fw-bold text-white">
+                Eastern Cape, South Africa
+              </h1>
+              <!-- Subheading -->
+              <p class="lead mb-4">
+                A land of beautiful, talented people plagued by poverty.
+              </p>
+              <!-- Call-to-Action Button -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="problem mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img
+              src="images/the problem 2.png"
+              class="img-fluid problem-1"
+              alt="Graphic"
+              data-aos="fade-right"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2>
+              <span id="typed"></span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- The Problem Section -->
+    <section class="container mb-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <!-- <h2 class="" data-aos="fade-left">The Solution</h2> -->
+          <h2>
+            <span id="typed2"></span>
+          </h2>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="images/the problem 6.png"
+            class="img-fluid problem-1"
+            alt="Graphic"
+            data-aos="fade-left"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="the-solution py-6">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>We Are Solving Both Problems</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Laboriosam quos distinctio ad numquam iste explicabo id saepe,
+              veniam, rerum ab, ullam ducimus. Tenetur architecto cumque
+              exercitationem debitis eum quae voluptatem?
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="images/Our Solution.png"
+              class="img-fluid problem-1"
+              alt="Graphic"
+              data-aos="fade-left"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="map-section">
       <div class="container py-5">
         <h2>Where We Work</h2>
         <p>
-          Masi works in over 100 schools and preschools in South Africa's most
+          Masi works in over 150 schools and preschools in South Africa's most
           impoverished region. The children we support are amongst the most
           impoverished on earth.
         </p>
@@ -29,17 +123,51 @@
         ></iframe>
       </div>
     </section>
-    <!-- Container for particles -->
-    <div
-      class="d-flex justify-content-center text-center align-items-center text-white"
-    >
-      <h2>Click Below to Simulate Hiring Youth</h2>
-    </div>
-    <div id="particles-js"></div>
 
     <!-- JavaScript files -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation happens only once
+      });
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- Initialize Typed.js -->
+    <script>
+      var typed = new Typed('#typed', {
+        strings: [
+          'Did You Know?',
+          'That 81% of 10-year old children in South Africa cannot read.',
+        ],
+        typeSpeed: 50,
+        backSpeed: 20,
+        backDelay: 2000,
+        startDelay: 500,
+        loop: false,
+        loopCount: Infinity,
+        showCursor: true,
+        cursorChar: '|',
+        autoInsertCss: true,
+      });
+    </script>
+    <script>
+      var typed = new Typed('#typed2', {
+        strings: [
+          "Or that South Africa has the world's highest unemployment rate?",
+        ],
+        typeSpeed: 50,
+        backSpeed: 20,
+        backDelay: 2000,
+        startDelay: 8500,
+        loop: false,
+        loopCount: Infinity,
+        showCursor: true,
+        cursorChar: '|',
+        autoInsertCss: true,
+      });
+    </script>
   </body>
 </html>
