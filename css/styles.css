@@ -34,6 +34,10 @@ h6 {
   color: white; /* Smooth transition */
 }
 
+#nav2 {
+  color: rgb(42, 42, 42) !important;
+}
+
 #navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.95); /* Opaque background when scrolled */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow when scrolled */
@@ -1389,10 +1393,82 @@ flip card
   box-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white;
 }
 
-/* Hero Section */
-.apply-hero-section {
-  background: url("../images/tl-strip-yellow.webp") no-repeat center center/cover;
-  height: 50vh;
-  color: white;
-  text-align: center;
+/* Hero Section New (Page 2) */
+.hero-section-new {
+  height: 100vh;
+}
+.hero-section-new h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  line-height: 4.2rem;
+}
+.hero-section-new p {
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 1.2;
+}
+.hero-section-new .container {
+  padding-top: 150px;
+  margin-left: 60px;
+  margin-right: 0px;
+}
+.hero-section-new .video-column {
+  height: 550px; /* Set desired height */
+  display: flex; /* Make the container a flexbox */
+  justify-content: flex-end; /* Aligns child elements (the video) to the right */
+  align-items: center; /* Optionally aligns the video vertically */
+  overflow: hidden; /* Ensures that video overflow is hidden */
+  position: relative;
+}
+.hero-section-new .video-content {
+  width: 95%;
+  height: 100%;
+  object-fit: cover; /* Makes sure the video covers the container */
+}
+.hero-section-new .btn {
+  max-width: 200px;
+  border-radius: 0;
+}
+
+#know,
+#problem-text {
+  color: black !important;
+  font-size: 24px;
+  visibility: visible !important;
+}
+
+.background-image-div {
+  background-image: url("../images/AR 23 Cover Page.png");
+  background-size: 85%; /* Adjusts the image to fit within the container */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+#AR2 {
+  /* Optional: Customize the button */
+  /* Responsive adjustments */
+}
+#AR2 .img-fluid {
+  max-width: 60%;
+  height: auto;
+  margin-left: 80px;
+}
+#AR2 .btn {
+  margin-top: 40px;
+}
+#AR2 .btn-primary {
+  border-color: var(--masi-red-2);
+  color: var(--masi-red-2);
+  background-color: white;
+  border-radius: 0;
+}
+#AR2 p {
+  max-width: 400px;
+  line-height: 1.2;
+}
+@media (max-width: 991.98px) {
+  #AR2 .display-4 {
+    font-size: 2.5rem;
+  }
 }

@@ -86,53 +86,53 @@ document.addEventListener('DOMContentLoaded', function () {
   // });
 
   // Initialize particles.js with 0 particles to start
-  particlesJS('particles-js', {
-    particles: {
-      number: {
-        value: 0, // Start with 0 particles
-        density: {
-          enable: true,
-          value_area: 800,
-        },
-      },
-      // shape: {
-      //   type: 'image',
-      //   image: {
-      //     src: 'images/book.svg', // Use a valid book SVG
-      //     width: 10,
-      //     height: 10,
-      //   },
-      // },
-      size: {
-        value: 10, // Size of the book icons
-      },
-      move: {
-        enable: true,
-        speed: 3, // Speed of particle movement
-        random: true,
-        straight: false,
-        out_mode: 'bounce',
-      },
-      line_linked: {
-        enable: false,
-      },
-    },
-    interactivity: {
-      events: {
-        onclick: {
-          enable: true,
-          mode: 'push', // Add particles on click
-        },
-      },
-      modes: {
-        push: {
-          particles_nb: 10, // Number of particles to add on each click
-        },
-      },
-    },
-  });
+  // particlesJS('particles-js', {
+  //   particles: {
+  //     number: {
+  //       value: 0, // Start with 0 particles
+  //       density: {
+  //         enable: true,
+  //         value_area: 800,
+  //       },
+  //     },
+  // shape: {
+  //   type: 'image',
+  //   image: {
+  //     src: 'images/book.svg', // Use a valid book SVG
+  //     width: 10,
+  //     height: 10,
+  //   },
+  // },
+  //   size: {
+  //     value: 10, // Size of the book icons
+  //   },
+  //   move: {
+  //     enable: true,
+  //     speed: 3, // Speed of particle movement
+  //     random: true,
+  //     straight: false,
+  //     out_mode: 'bounce',
+  //   },
+  //   line_linked: {
+  //     enable: false,
+  //   },
+  // },
+  // interactivity: {
+  //     events: {
+  //       onclick: {
+  //         enable: true,
+  //         mode: 'push', // Add particles on click
+  //       },
+  //     },
+  //     modes: {
+  //       push: {
+  //         particles_nb: 10, // Number of particles to add on each click
+  //       },
+  //     },
+  //   },
+  // });
 
-  window.addEventListener('load', initSwiper);
+  // window.addEventListener('load', initSwiper);
 
   // Floating Stats Data Drive Section
   const stats = document.querySelectorAll('#floating-stats .stat');
@@ -219,6 +219,57 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
+  if (document.querySelector('#typed-test')) {
+    new Typed('#typed-test', {
+      strings: [
+        'Hello, this is a test to check if Typed.js is working.',
+        'It should type and delete these messages.',
+        'If you see this, Typed.js is functional!',
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 1000,
+      startDelay: 500,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  }
+
+  // Ensure the elements are present before trying to use Typed.js
+  if (
+    document.querySelector('#problem-text') &&
+    document.querySelector('#know')
+  ) {
+    // Initialize typed.js for the problem text
+    new Typed('#problem-text', {
+      strings: [
+        'That 81% of children in South Africa cannot read.',
+        'Or that South Africa has the highest youth unemployment rate in the world.',
+        'We are solving both of those problems.',
+      ],
+      typeSpeed: 50,
+      backSpeed: 12,
+      backDelay: 1000,
+      startDelay: 1500,
+      loop: true,
+      loopCount: Infinity,
+      showCursor: true,
+      cursorChar: '|',
+    });
+
+    // Initialize typed.js for the "Did You Know?" text
+    new Typed('#know', {
+      strings: ['Did You Know?'],
+      typeSpeed: 60,
+      startDelay: 500,
+      loop: false,
+      showCursor: false,
+    });
+  } else {
+    console.error('Element(s) for Typed.js not found');
+  }
+
   /* -- Additional handling for touch events -- */
 
   // Handle mouse down event for desktop
@@ -240,28 +291,4 @@ document.addEventListener('DOMContentLoaded', function () {
   window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
   // -- End of About Us Image Track --
-
-  var typed = new Typed('#problem-text', {
-    strings: [
-      'That 81% of children in South Africa cannot read.',
-      'Or that South Africa has the highest youth unemployment rate in the world.',
-      'We are solving both of those problems.',
-    ],
-    typeSpeed: 50, // Speed of typing
-    backSpeed: 12, // Speed of deleting text
-    backDelay: 1000, // Delay before deleting the sentence
-    startDelay: 1500, // Delay before starting the typing animation
-    loop: true, // Loop the animation
-    loopCount: Infinity, // Repeat forever
-    showCursor: true, // Show cursor at the end of the typed text
-    cursorChar: '|', // Customize the cursor character
-  });
-
-  var typed = new Typed('#know', {
-    strings: ['Did You Know?'],
-    typeSpeed: 60, // Speed of typing
-    startDelay: 500, // Start after 500ms delay
-    loop: false, // No looping or deleting
-    showCursor: false, // No blinking cursor
-  });
 });

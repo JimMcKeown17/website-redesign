@@ -38,6 +38,10 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   color: white; /* Smooth transition */
 }
 
+#nav2 {
+  color: rgb(42, 42, 42) !important;
+}
+
 #navbar.scrolled {
   background-color: rgba(
     255,
@@ -1546,13 +1550,93 @@ flip card
   }
 }
 
-// Applications Page
+/* Hero Section New (Page 2) */
 
-/* Hero Section */
-.apply-hero-section {
-  background: url('../images/tl-strip-yellow.webp') no-repeat center
-    center/cover;
-  height: 50vh;
-  color: white;
-  text-align: center;
+.hero-section-new {
+  height: 100vh;
+
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    line-height: 4.2rem;
+    // margin-bottom: 10px;
+  }
+
+  p {
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 1.2;
+  }
+
+  .container {
+    padding-top: 150px;
+    margin-left: 60px;
+    margin-right: 0px;
+  }
+
+  .video-column {
+    height: 550px; /* Set desired height */
+    display: flex; /* Make the container a flexbox */
+    justify-content: flex-end; /* Aligns child elements (the video) to the right */
+    align-items: center; /* Optionally aligns the video vertically */
+    overflow: hidden; /* Ensures that video overflow is hidden */
+    position: relative;
+  }
+
+  .video-content {
+    width: 95%;
+    height: 100%;
+    object-fit: cover; /* Makes sure the video covers the container */
+  }
+
+  .btn {
+    max-width: 200px;
+    border-radius: 0;
+  }
+}
+
+#know,
+#problem-text {
+  color: black !important;
+  font-size: 24px;
+  visibility: visible !important;
+}
+
+.background-image-div {
+  background-image: url('../images/AR\ 23\ Cover\ Page.png');
+  background-size: 85%; /* Adjusts the image to fit within the container */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+#AR2 {
+  .img-fluid {
+    max-width: 60%;
+    height: auto;
+    margin-left: 80px;
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+  /* Optional: Customize the button */
+  .btn-primary {
+    border-color: var(--masi-red-2);
+    color: var(--masi-red-2);
+    background-color: white;
+    border-radius: 0;
+  }
+
+  p {
+    max-width: 400px;
+    line-height: 1.2;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    .display-4 {
+      font-size: 2.5rem;
+    }
+  }
 }

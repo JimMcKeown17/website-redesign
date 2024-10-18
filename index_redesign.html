@@ -19,6 +19,7 @@
   </head>
   <body>
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
@@ -39,10 +40,10 @@
           class="collapse navbar-collapse justify-content-center"
           id="navbarNavDropdown"
         >
-          <ul class="navbar-nav">
+          <ul id="nav2" class="navbar-nav">
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-link-white dropdown-toggle"
                 href="#"
                 id="navbarDropdownMenuLink1"
                 role="button"
@@ -60,11 +61,16 @@
                 <li>
                   <a class="dropdown-item" href="where.html">Where We Work</a>
                 </li>
+                <li>
+                  <a class="dropdown-item" href="apply.html"
+                    >Jobs & Applications</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-link-white dropdown-toggle"
                 href="#"
                 id="navbarDropdownMenuLink2"
                 role="button"
@@ -77,81 +83,65 @@
                 aria-labelledby="navbarDropdownMenuLink2"
               >
                 <li>
-                  <a class="dropdown-item" href="#"
+                  <a class="dropdown-item" href="children.html"
                     >Early Childhood Education</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="#">Community Jobs</a></li>
-                <li><a class="dropdown-item" href="#">Scholarship Fund</a></li>
+                <li>
+                  <a class="dropdown-item" href="youth.html">Community Jobs</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="top_learner.html"
+                    >Scholarship Fund</a
+                  >
+                </li>
               </ul>
             </li>
 
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-link-white dropdown-toggle"
                 href="#"
                 id="navbarDropdownMenuLink4"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                >Data & Impact</a
+                >Impact</a
               >
               <ul
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink4"
               >
                 <li>
-                  <a class="dropdown-item" href="https://data.masinyusane.org"
-                    >Data Portal</a
-                  >
+                  <a class="dropdown-item" href="data.html">Data Portal</a>
                 </li>
                 <li><a class="dropdown-item" href="#">Impact Reports</a></li>
                 <li><a class="dropdown-item" href="#">Media Gallery</a></li>
               </ul>
             </li>
+
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-link-white dropdown-toggle"
                 href="#"
                 id="navbarDropdownMenuLink4"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                >Apply Here</a
+                >Test Pages</a
               >
               <ul
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink4"
               >
-                <li>
-                  <a class="dropdown-item" href="#">Apply for Youth Job</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Apply for Staff Job</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Apply for Bursary</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink4"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Home Page Design</a
-              >
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink4"
-              >
-                <li>
-                  <a class="dropdown-item" href="index.html">Home Page 1</a>
-                </li>
                 <li>
                   <a class="dropdown-item" href="index_redesign.html"
                     >Home Page 2</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index_redesign.html"
+                    >Home Page 3</a
                   >
                 </li>
               </ul>
@@ -159,39 +149,113 @@
           </ul>
         </div>
         <div class="d-flex">
-          <a href="#" class="btn btn-danger">Donate</a>
+          <a href="#" class="button-donate">Donate</a>
         </div>
       </div>
     </nav>
     <!-- HERO VIDEO -->
-    <div class="video-container">
-      <video autoplay muted loop>
-        <source src="./images/ZZ Background 3.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="video-overlay">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-vid-box">
-              <h1 class="text-shadow vid-title mb-3">
-                Empowering Through Education
-              </h1>
-              <p class="text-shadow text-white vid-subtitle">
-                Data-Driven Early Childhood Literacy & Numeracy Programs in
-                Southern Africa.
+    <section class="hero-section-new">
+      <div class="container">
+        <div class="row">
+          <!-- Left Column - Text Content -->
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <h1 class="">Empowering Through Education</h1>
+            <p class="lead mt-3">
+              Local Communities Implementing Data-Driven Literacy & Numeracy
+              Programmes.
+            </p>
+            <a href="#donate" class="btn btn-outline-dark mt-5"
+              >Sponsor a Kid</a
+            >
+          </div>
+
+          <!-- Right Column - Video Content -->
+          <div class="col-md-8 position-relative video-column">
+            <video autoplay muted loop playsinline class="video-content">
+              <source src="../images/ZZ Background 3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Annual Report Strip 1">
+      <!-- Annual Report Highlight Strip -->
+      <div class="container-fluid p-0">
+        <div class="position-relative text-center text-white">
+          <!-- Background Image Div -->
+          <div class="background-image-div w-100" style="height: 550px">
+            <!-- Overlay -->
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+              style="background-color: rgba(0, 0, 0, 0.6)"
+            >
+              <!-- Headline -->
+              <h1 class="display-4 fw-bold text-white">Our Impact This Year</h1>
+              <!-- Subheading -->
+              <p class="lead mb-4">
+                Journey through our achievements and milestones.
               </p>
+              <!-- Call-to-Action Button -->
+              <a
+                href="static/reports/Masinyusane 2023 Annual Report (RSA).pdf"
+                class="btn btn-lg btn-outline-white"
+                >Read the Annual Report</a
+              >
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section id="AR2">
+      <!-- Annual Report Highlight Strip -->
+      <div class="container my-5">
+        <div class="row align-items-center">
+          <!-- Image Column -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img
+              src="images/AR 23 Cover Page.png"
+              alt="Annual Report Cover"
+              class="img-fluid shadow rounded"
+            />
+          </div>
+          <!-- Text Column -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <!-- Headline -->
+            <h1 class="display-4 fw-bold">Our Impact</h1>
+            <!-- Subheading -->
+            <p class="lead mb-4">
+              Journey through our achievements and milestones last year.
+            </p>
+            <!-- Call-to-Action Button -->
+            <a
+              href="link-to-your-annual-report.pdf"
+              class="btn btn-lg btn-primary"
+              >Read the Annual Report</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Typed Text Example -->
     <div class="container my-5">
       <div class="typed-container">
         <span id="know"></span><br />
-        <span id="problem-text"></span>
+        <!-- <span id="problem-text"></span> -->
         <!-- This is where the Typed.js animation will display -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- Your Existing Footer Content Here -->
+
+        <!-- New Typed Section for Testing -->
+        <div class="col-12 my-4 text-center">
+          <h5 id="typed-test"></h5>
+        </div>
       </div>
     </div>
     <!-- The Problem Section -->
@@ -326,43 +390,6 @@
       </div>
     </section>
 
-    <!-- Floating Statistics Section -->
-    <section id="floating-stats">
-      <div class="container stat-container">
-        <div class="row">
-          <div
-            class="col-md-5 offset-md-1 d-flex flex-column justify-content-center text-white"
-          >
-            <h1 class="text-white">Data Driven Results</h1>
-            <p>
-              We measure dozens of metrics for each child. By leveraging
-              real-time data, we can tailor interventions to meet the specific
-              needs of each child, maximizing the impact of our programs.
-            </p>
-            <a href="data-portal.html" class="btn btn-outline-white"
-              >Enter Data Portal</a
-            >
-          </div>
-          <div class="col-md-6">
-            <!-- Individual statistic elements -->
-            <span class="stat">Letters Known: 37</span>
-            <span class="stat">Reading Score: 14</span>
-            <span class="stat">Sentence Writing: 33</span>
-            <span class="stat">Total Literacy Score: 98</span>
-            <span class="stat">Phonetic Awareness: 66</span>
-            <span class="stat">Word Reading: 22</span>
-            <span class="stat">Non-Word Reading: 97</span>
-            <span class="stat">Total Literacy Score: 86</span>
-            <span class="stat">Story Writing: 45</span>
-            <span class="stat">Letter EGRA: 51</span>
-            <span class="stat">Reading Improvement: 121%</span>
-            <span class="stat">First Sounds: 48</span>
-            <span class="stat">Total Literacy Score: 52</span>
-            <span class="stat">Literacy Score Improvement: 61%</span>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="testimonials" class="py-5">
       <div class="container">
         <div class="row">
@@ -613,42 +640,8 @@
     <!-- Include GSAP Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const stats = document.querySelectorAll('#floating-stats .stat');
-        const sectionHeight =
-          document.getElementById('floating-stats').offsetHeight;
-
-        stats.forEach((stat) => {
-          const randomLeft = 30 + Math.random() * 90;
-          stat.style.left = randomLeft + '%';
-
-          const randomFontSize = Math.random() * 10 + 14;
-          stat.style.fontSize = randomFontSize + 'px';
-
-          gsap.fromTo(
-            stat,
-            { y: sectionHeight, opacity: 0 },
-            {
-              y: -50,
-              opacity: 1,
-              duration: Math.random() * 10 + 10,
-              delay: Math.random() * 5,
-              repeat: -1,
-              ease: 'linear',
-              onRepeat: function () {
-                stat.style.left = 30 + Math.random() * 90 + '%';
-                stat.style.fontSize = Math.random() * 10 + 14 + 'px';
-                this.duration(Math.random() * 10 + 10);
-              },
-            }
-          );
-        });
-      });
-    </script>
-
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
@@ -657,5 +650,7 @@
         once: true, // Animation happens only once
       });
     </script>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
