@@ -1540,3 +1540,27 @@ flip card
   height: 500px;
   width: 100%;
 }
+
+.impact-title-light {
+  font-weight: 100;
+}
+
+.impact-report {
+  height: 500px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.impact-report:hover {
+  transform: translateY(-10px);
+}
+
+.yearly-reports li a {
+  text-decoration: none;
+  color: rgba(var(--bs-dark-rgb));
+  font-weight: 100;
+}
+.yearly-reports h2 {
+  font-weight: 200;
+  font-size: 3rem;
+}
