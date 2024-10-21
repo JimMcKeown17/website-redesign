@@ -71,60 +71,124 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
 }
 
 /* HERO BANNER */
-.video-container {
-  height: calc(100vh);
-  // overflow: hidden;
-  position: relative;
+
+.home-hero {
+  .video-container {
+    height: calc(100vh);
+    // overflow: hidden;
+    position: relative;
+  }
+
+  .video-container > h1 {
+    z-index: 1;
+    color: white;
+  }
+
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-overlay {
+    position: absolute;
+    width: 100vw;
+    // max-width: 400px;
+    top: 30%;
+    // left: 20%;
+    // transform: translate(-60%, -60%);
+    text-align: left;
+    color: white;
+    // margin-left: 10px;
+  }
+
+  .video-overlay h1 {
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    line-height: 4.2rem;
+    margin-bottom: 50px;
+  }
+
+  .video-overlay-text {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 768px) {
+    .video-overlay h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .video-overlay-text {
+      font-size: 1.1rem;
+    }
+  }
 }
 
-.video-container > h1 {
-  z-index: 1;
-  color: white;
+.child-strip {
+  .font-stat-lg {
+    font-size: 3rem;
+  }
+
+  .full-strip-img {
+    width: 100%; /* Ensures it takes the full width of the parent container */
+    object-fit: contain; /* Adjusts the image to fit without distortion */
+    display: block;
+    margin: 0 auto;
+  }
+
+  .text-content1 {
+    position: absolute;
+    top: 35%;
+    left: 20%; /* Aligns the text content to the left */
+    transform: translateY(-50%);
+    color: white;
+    text-align: left; /* Aligns the text to the left */
+  }
+
+  .top-strip-stat {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 10rem;
+    margin: 0;
+  }
+
+  .top-strip-text-light {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+    line-height: 1.7rem;
+  }
+
+  .top-strip-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.7rem;
+  }
+
+  @media (max-width: 768px) {
+    .top-strip-text-light {
+      font-size: 1rem;
+      line-height: 1;
+    }
+  }
 }
 
-.video-container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.mission {
+  @media (max-width: 768px) {
+    line-height: 1.5;
+  }
 }
-
-.video-overlay {
-  position: absolute;
-  width: 100vw;
-  // max-width: 400px;
-  top: 30%;
-  // left: 20%;
-  // transform: translate(-60%, -60%);
-  text-align: left;
-  color: white;
-  // margin-left: 10px;
-}
-
-.video-overlay h1 {
-  color: white;
-  font-size: 4rem;
-  margin: 0;
-  padding: 0;
-  line-height: 4.2rem;
-  margin-bottom: 50px;
-}
-
-.video-overlay-text {
-  font-size: 1.3rem;
-}
-// #opportunities {
-//   color: red;
-// }
-
 .full-width-section {
   width: 100%;
   height: auto;
   position: relative;
 }
-
-// .mission-section {
-//   margin: 0 7rem;
-// }
 
 // TOP STRIP
 
@@ -146,6 +210,48 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   object-fit: contain; /* Adjusts the image to fit without distortion */
   display: block;
   margin: 0 auto;
+}
+
+.youth-info-strip {
+  position: relative;
+  z-index: 2;
+  margin-top: 96px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+
+    .btn {
+      max-width: 120px;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    h6 {
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.scholarship-info-strip {
+  position: relative;
+  z-index: 2;
+  margin-top: 96px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+
+    .btn {
+      max-width: 120px;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    h6 {
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .text-content1 {
@@ -254,14 +360,18 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   color: var(--masi-yellow);
   font-size: 3rem;
 }
-// CARD REASONS TO PARTNER
-// .reasons {
-//   background-color: lightgray;
-// }
 
-/*
-flip card
-*/
+.reasons {
+  padding: 60px 0;
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+
+    .card-title {
+      font-size: 16px;
+    }
+  }
+}
 
 .card-flip > div {
   backface-visibility: hidden;
@@ -709,6 +819,16 @@ flip card
 .child-info-strip {
   position: relative;
   z-index: 2;
+  margin-top: 96px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+
+    .btn {
+      max-width: 120px;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 // Youth Staff Container
@@ -967,6 +1087,12 @@ flip card
   text-decoration: none;
 }
 
+.footer-info {
+  max-width: 275px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
 /* DATA DRIVEN RESULTS SECTION */
 #data-driven-results {
   position: relative;
@@ -1026,6 +1152,11 @@ flip card
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 400px;
+    text-align: center;
+  }
 }
 
 #floating-stats::before {

@@ -61,31 +61,27 @@ h6 {
 }
 
 /* HERO BANNER */
-.video-container {
+.home-hero .video-container {
   height: 100vh;
   position: relative;
 }
-
-.video-container > h1 {
+.home-hero .video-container > h1 {
   z-index: 1;
   color: white;
 }
-
-.video-container video {
+.home-hero .video-container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.video-overlay {
+.home-hero .video-overlay {
   position: absolute;
   width: 100vw;
   top: 30%;
   text-align: left;
   color: white;
 }
-
-.video-overlay h1 {
+.home-hero .video-overlay h1 {
   color: white;
   font-size: 4rem;
   margin: 0;
@@ -93,9 +89,67 @@ h6 {
   line-height: 4.2rem;
   margin-bottom: 50px;
 }
-
-.video-overlay-text {
+.home-hero .video-overlay-text {
   font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .home-hero .video-overlay h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .home-hero .video-overlay-text {
+    font-size: 1.1rem;
+  }
+}
+
+.child-strip .font-stat-lg {
+  font-size: 3rem;
+}
+.child-strip .full-strip-img {
+  width: 100%; /* Ensures it takes the full width of the parent container */
+  object-fit: contain; /* Adjusts the image to fit without distortion */
+  display: block;
+  margin: 0 auto;
+}
+.child-strip .text-content1 {
+  position: absolute;
+  top: 35%;
+  left: 20%; /* Aligns the text content to the left */
+  transform: translateY(-50%);
+  color: white;
+  text-align: left; /* Aligns the text to the left */
+}
+.child-strip .top-strip-stat {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 10rem;
+  margin: 0;
+}
+.child-strip .top-strip-text-light {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 5px;
+  line-height: 1.7rem;
+}
+.child-strip .top-strip-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.7rem;
+}
+@media (max-width: 768px) {
+  .child-strip .top-strip-text-light {
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission {
+    line-height: 1.5;
+  }
 }
 
 .full-width-section {
@@ -119,6 +173,46 @@ h6 {
   object-fit: contain; /* Adjusts the image to fit without distortion */
   display: block;
   margin: 0 auto;
+}
+
+.youth-info-strip {
+  position: relative;
+  z-index: 2;
+  margin-top: 96px;
+}
+@media (max-width: 768px) {
+  .youth-info-strip {
+    margin-top: 20px;
+  }
+  .youth-info-strip .btn {
+    max-width: 120px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .youth-info-strip h6 {
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+}
+
+.scholarship-info-strip {
+  position: relative;
+  z-index: 2;
+  margin-top: 96px;
+}
+@media (max-width: 768px) {
+  .scholarship-info-strip {
+    margin-top: 20px;
+  }
+  .scholarship-info-strip .btn {
+    max-width: 120px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .scholarship-info-strip h6 {
+    line-height: 1;
+    margin-bottom: 5px;
+  }
 }
 
 .text-content1 {
@@ -226,9 +320,18 @@ h6 {
   font-size: 3rem;
 }
 
-/*
-flip card
-*/
+.reasons {
+  padding: 60px 0;
+}
+@media (max-width: 768px) {
+  .reasons {
+    padding: 20px 0;
+  }
+  .reasons .card-title {
+    font-size: 16px;
+  }
+}
+
 .card-flip > div {
   backface-visibility: hidden;
   transition: transform 300ms;
@@ -629,6 +732,16 @@ flip card
 .child-info-strip {
   position: relative;
   z-index: 2;
+  margin-top: 96px;
+}
+@media (max-width: 768px) {
+  .child-info-strip {
+    margin-top: 20px;
+  }
+  .child-info-strip .btn {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
 }
 
 .staff-container {
@@ -858,6 +971,12 @@ flip card
   text-decoration: none;
 }
 
+.footer-info {
+  max-width: 275px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
 /* DATA DRIVEN RESULTS SECTION */
 #data-driven-results {
   position: relative;
@@ -915,6 +1034,12 @@ flip card
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  #floating-stats {
+    height: 400px;
+    text-align: center;
+  }
 }
 
 #floating-stats::before {
