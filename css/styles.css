@@ -352,6 +352,7 @@ h6 {
   position: absolute;
   top: 0;
   line-height: 1.2;
+  font-weight: 100;
   color: white;
   background-color: rgba(var(--bs-dark-rgb));
   transition: 0.2s ease-in-out;
@@ -363,6 +364,12 @@ h6 {
 
 .card-flip:hover .card-back {
   transform: rotateY(0deg);
+}
+
+@media (min-width: 768px) {
+  .annual-report-strip .btn .btn-lg .btn-outline-white .report-button {
+    font-size: 12px !important;
+  }
 }
 
 .logo-scroll-container {
