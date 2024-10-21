@@ -1042,6 +1042,10 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+#floating-stats .polar-img {
+  height: 420px;
+  z-index: 5;
+}
 @media (max-width: 768px) {
   #floating-stats {
     height: 400px;
@@ -1077,6 +1081,26 @@ h6 {
   position: absolute;
   color: #fff;
   white-space: nowrap;
+}
+
+#floating-stats2 {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#floating-stats2 .polar-img {
+  height: 420px;
+  z-index: 5;
+}
+@media (max-width: 768px) {
+  #floating-stats2 {
+    height: 400px;
+    text-align: center;
+  }
 }
 
 .btn-outline-white {
@@ -1522,6 +1546,99 @@ h6 {
   z-index: -1;
 }
 .portal-button a:hover:before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white;
+}
+
+.portal-button2 a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(var(--bs-dark-rgb));
+  padding: 15px 30px;
+  border: 2px solid rgba(var(--bs-dark-rgb));
+  font-size: 20px;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+.portal-button2 a:hover {
+  color: black;
+  border: 2px solid transparent;
+}
+.portal-button2 a span {
+  position: absolute;
+  box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 50px white, 0 0 100px white;
+}
+.portal-button2 a span:nth-child(1),
+.portal-button2 a span:nth-child(3) {
+  width: 7px;
+  height: 4px;
+}
+.portal-button2 a span:nth-child(2),
+.portal-button2 a span:nth-child(4) {
+  width: 4px;
+  height: 7px;
+}
+.portal-button2 a span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -10px;
+  transition: 0.5s ease-in-out;
+  transform-origin: left;
+  transition-delay: 0.25s;
+}
+.portal-button2 a:hover span:nth-child(1) {
+  left: 50%;
+  transform: scaleX(0);
+  transition-delay: 0s;
+}
+.portal-button2 a span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -10px;
+  transition: 0.5s ease-in-out;
+  transform-origin: right;
+  transition-delay: 0.25s;
+}
+.portal-button2 a:hover span:nth-child(3) {
+  right: 50%;
+  transform: scaleX(0);
+  transition-delay: 0s;
+}
+.portal-button2 a span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -10px;
+  transition: 0.5s ease-in-out;
+  transform-origin: top;
+  transition-delay: 0.25s;
+}
+.portal-button2 a:hover span:nth-child(2) {
+  top: 50%;
+  transform: scaleY(0);
+  transition-delay: 0s;
+}
+.portal-button2 a span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -10px;
+  transition: 0.5s ease-in-out;
+  transform-origin: bottom;
+  transition-delay: 0.25s;
+}
+.portal-button2 a:hover span:nth-child(4) {
+  bottom: 50%;
+  transform: scaleY(0);
+  transition-delay: 0s;
+}
+.portal-button2 a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.5s;
+  z-index: -1;
+}
+.portal-button2 a:hover:before {
   transform: scale(1);
   transition-delay: 0.5s;
   box-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white;
