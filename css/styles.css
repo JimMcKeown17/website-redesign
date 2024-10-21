@@ -1564,3 +1564,10 @@ flip card
   font-weight: 200;
   font-size: 3rem;
 }
+
+.donate-hero-section {
+  background: url("../images/Strip - Child.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
