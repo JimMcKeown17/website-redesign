@@ -1119,6 +1119,86 @@ h6 {
   color: #000;
 }
 
+#data-strip-3 {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#data-strip-3 .left-column {
+  position: relative; /* White background by default */
+  padding: 30px; /* Padding for inner spacing */
+  z-index: 3; /* Keeps the content above any background */
+}
+#data-strip-3 .right-column {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Keeps content positioned */
+  z-index: 2;
+}
+#data-strip-3 .right-column-graphics {
+  display: flex;
+  margin-left: 20%;
+}
+#data-strip-3 .left-column::before {
+  content: "";
+  position: absolute;
+  right: 0%;
+  width: 66vw; /* Extends the background to the full viewport width */
+  height: 100%;
+  background-color: #f8f8f8; /* Light grey background */
+  z-index: -1; /* Places it behind the actual content */
+}
+#data-strip-3 .polar-img {
+  height: 420px;
+  z-index: 5;
+  position: relative;
+}
+#data-strip-3 .child-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Adjust to position it properly with respect to the polar chart */
+}
+#data-strip-3 .child-img {
+  width: 150px; /* Adjust size as necessary */
+  height: 150px; /* Adjust size as necessary */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+}
+#data-strip-3 .child-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Adds some space between the image and the text */
+}
+#data-strip-3 .child-name {
+  background-color: #1c3b72; /* Dark blue background */
+  color: #fff; /* White text color */
+  padding: 8px 35px; /* Padding around the text */
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 9px; /* Adjust font size as needed */
+}
+#data-strip-3 .child-scores {
+  color: #1c3b72;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 1200px) {
+  #data-strip-3 .left-column::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #data-strip-3 .left-column::before {
+    display: none;
+  }
+}
+
 .testimonial-card {
   width: 100%;
   border: none; /* Remove border for a cleaner look */
@@ -1306,6 +1386,13 @@ h6 {
 }
 .children .video-player iframe {
   border-radius: 10px;
+}
+@media (max-width: 767.98px) {
+  .children {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 10px;
+  }
 }
 
 /* Hero Section */
@@ -1743,7 +1830,7 @@ h6 {
   background-size: 100%; /* Adjusts the image to fit within the container */
   background-position: center center; /* Centers the image */
   background-repeat: no-repeat;
-  height: 800px; /* Prevents the image from repeating */
+  height: 900px; /* Prevents the image from repeating */
 }
 .impact-stats-new .impact-background {
   background-image: url("path-to-your-background-image.jpg"); /* Replace with your image path */
@@ -1753,16 +1840,6 @@ h6 {
 .impact-stats-new .impact-stats-new .container {
   position: relative;
   z-index: 2;
-}
-.impact-stats-new .impact-stats-new::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
-  z-index: 1;
 }
 .impact-stats-new .stat-number {
   font-size: 3rem;
@@ -1776,6 +1853,9 @@ h6 {
   color: rgba(var(--bs-dark-rgb));
 }
 @media (max-width: 767.98px) {
+  .impact-stats-new {
+    display: none;
+  }
   .impact-stats-new .impact-stats-new {
     height: auto;
     padding: 50px 0;
