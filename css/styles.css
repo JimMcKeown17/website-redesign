@@ -1986,3 +1986,48 @@ h6 {
   width: 80%;
   height: 80%;
 }
+
+.approach .card {
+  background-color: #f8f9fa;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+.approach .card .card-body .fa-2x {
+  color: rgba(var(--bs-dark-rgb));
+}
+.approach .card .card-body .card-title {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: rgba(var(--bs-dark-rgb));
+}
+.approach .card .card-body .card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.approach .card:hover {
+  background-color: rgba(213, 214, 215, 0.6941176471);
+  transform: translateY(-5px);
+}
+
+.approach2 .accordion-item {
+  border: none;
+  margin-bottom: 1rem;
+}
+.approach2 .accordion-item .accordion-button {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+}
+.approach2 .accordion-item .accordion-button:not(.collapsed) {
+  color: #007bff;
+  background-color: #e9ecef;
+}
+.approach2 .accordion-item .accordion-body {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+.approach2 .accordian-highlight {
+  color: rgba(var(--bs-dark-rgb));
+}

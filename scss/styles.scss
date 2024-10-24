@@ -2229,3 +2229,61 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
     }
   }
 }
+
+.approach {
+  .card {
+    background-color: #f8f9fa; // Light grey background
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow effect
+    padding: 1.5rem;
+    transition: 0.3s ease-in-out;
+
+    .card-body {
+      .fa-2x {
+        color: rgba(var(--bs-dark-rgb)); // Icon color
+      }
+
+      .card-title {
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+        color: rgba(var(--bs-dark-rgb));
+      }
+
+      .card-text {
+        font-size: 0.9rem;
+        color: #6c757d; // Text color for better readability
+      }
+    }
+  }
+  .card:hover {
+    background-color: #d5d6d7b1; // Light grey background
+    transform: translateY(-5px);
+  }
+}
+
+.approach2 {
+  .accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+
+    .accordion-button {
+      background-color: #f8f9fa; // Light grey background
+      font-weight: bold;
+      color: #333;
+
+      &:not(.collapsed) {
+        color: #007bff; // Highlighted color when open
+        background-color: #e9ecef;
+      }
+    }
+
+    .accordion-body {
+      background-color: #f8f9fa; // Match the accordion button background
+      color: #6c757d; // Text color for better readability
+    }
+  }
+
+  .accordian-highlight {
+    color: rgba(var(--bs-dark-rgb));
+  }
+}
