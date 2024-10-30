@@ -34,6 +34,13 @@ h6 {
   color: white; /* Smooth transition */
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  border: none;
+  border-radius: 0px;
+  opacity: 0.95;
+}
+
 #nav2 {
   color: rgb(42, 42, 42) !important;
 }
@@ -58,6 +65,102 @@ h6 {
 /* Donation button */
 .btn-danger {
   margin-right: 10px;
+}
+
+/* Font Awesome Icons for Navbar Items */
+.nav-link::before {
+  font-family: "FontAwesome";
+  margin-right: 8px;
+}
+
+/* Specific Icons for Navbar Links */
+#navbarNavDropdown .our-team-drop::before {
+  content: "\f0c0"; /* User icon for Our Team */
+  font-family: "FontAwesome";
+  margin-right: 8px;
+}
+
+#navbarNavDropdown .nav-link[href*=programs]::before {
+  content: "\f0c0"; /* Group icon for Programs */
+}
+
+#navbarNavDropdown .nav-link[href*=impact]::before {
+  content: "\f201"; /* Bar chart icon for Impact */
+}
+
+#navbarNavDropdown .nav-link[href*=test]::before {
+  content: "\f1c0"; /* File icon for Test Pages */
+}
+
+.dropdown-item::before {
+  font-family: "FontAwesome";
+  margin-right: 8px;
+}
+
+/* Specific Icons for Dropdown Items */
+.dropdown-menu a[href*=our_team]::before {
+  content: "\f007"; /* User icon for Our Team */
+}
+
+.dropdown-item[href*=where]::before {
+  content: "\f041"; /* Map marker icon for Where We Work */
+}
+
+.dropdown-item[href*=apply]::before {
+  content: "\f0b1"; /* Briefcase icon for Jobs & Applications */
+}
+
+.dropdown-item[href*=children]::before {
+  content: "\f1ae"; /* Child icon for Early Childhood Education */
+}
+
+.dropdown-item[href*=youth]::before {
+  content: "\f183"; /* Handshake icon for Community Jobs */
+}
+
+.dropdown-item[href*=top_learner]::before {
+  content: "\f19d"; /* Graduation cap icon for Scholarship Fund */
+}
+
+.dropdown-item[href*=data]::before {
+  content: "\f1c8"; /* Database icon for Data Portal */
+}
+
+.dropdown-item[href*=impact]::before {
+  content: "\f201"; /* Bar chart icon for Impact Reports */
+}
+
+#navbarNavDropdown .media-gallery-drop::before {
+  content: "\f03e"; /* User icon for Our Team */
+  font-family: "FontAwesome";
+  margin-right: 8px;
+}
+
+.dropdown-item[href*=index_redesign]::before {
+  content: "\f015"; /* Home icon for Home Page */
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  #navbar {
+    background-color: rgba(255, 255, 255, 0.95); /* Ensure readability on mobile */
+  }
+}
+/* Navbar Dark Styling */
+#navbar-dark {
+  background-color: rgba(255, 255, 255, 0); /* Transparent background initially */
+  transition: background-color 0.5s ease;
+  color: rgb(42, 42, 42); /* Dark text initially */
+}
+
+#navbar-dark.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* Opaque background when scrolled */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link-dark {
+  color: rgb(42, 42, 42) !important; /* Dark text for links */
+  transition: color 0.3s ease;
 }
 
 /* HERO BANNER */

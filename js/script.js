@@ -52,87 +52,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Scroll-based navbar behavior
   const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.nav-link'); // Select all nav links
+  const navbarDark = document.getElementById('navbar-dark');
+  const navLinks = document.querySelectorAll('.nav-link'); // Select all light nav links
+  const navLinksDark = document.querySelectorAll('.nav-link-dark'); // Select all dark nav links
 
+  // Consolidated scroll-based navbar behavior
   window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-      navLinks.forEach((link) => link.classList.remove('nav-link-white'));
+      if (navbar) {
+        navbar.classList.add('scrolled');
+        navLinks.forEach((link) => link.classList.remove('nav-link-white'));
+      }
+      if (navbarDark) {
+        navbarDark.classList.add('scrolled');
+        navLinksDark.forEach((link) => link.style.color = "rgb(42, 42, 42)"); // Keep dark color
+      }
     } else {
-      navbar.classList.remove('scrolled');
-      navLinks.forEach((link) => link.classList.add('nav-link-white'));
+      if (navbar) {
+        navbar.classList.remove('scrolled');
+        navLinks.forEach((link) => link.classList.add('nav-link-white'));
+      }
+      if (navbarDark) {
+        navbarDark.classList.remove('scrolled');
+        navLinksDark.forEach((link) => link.style.color = "rgb(42, 42, 42)"); // Keep dark color initially
+      }
     }
   });
 
-  // Original Working Particles.js initialization
-  // particlesJS('particles-js', {
-  //   particles: {
-  //     number: {
-  //       value: 80,
-  //     },
-  //     shape: {
-  //       type: 'circle', // You can change this to "image" for custom shapes
-  //     },
-  //     size: {
-  //       value: 3,
-  //     },
-  //     line_linked: {
-  //       enable: true,
-  //     },
-  //     move: {
-  //       speed: 2,
-  //     },
-  //   },
-  // });
-
-  // Initialize particles.js with 0 particles to start
-  // particlesJS('particles-js', {
-  //   particles: {
-  //     number: {
-  //       value: 0, // Start with 0 particles
-  //       density: {
-  //         enable: true,
-  //         value_area: 800,
-  //       },
-  //     },
-  // shape: {
-  //   type: 'image',
-  //   image: {
-  //     src: 'images/book.svg', // Use a valid book SVG
-  //     width: 10,
-  //     height: 10,
-  //   },
-  // },
-  //   size: {
-  //     value: 10, // Size of the book icons
-  //   },
-  //   move: {
-  //     enable: true,
-  //     speed: 3, // Speed of particle movement
-  //     random: true,
-  //     straight: false,
-  //     out_mode: 'bounce',
-  //   },
-  //   line_linked: {
-  //     enable: false,
-  //   },
-  // },
-  // interactivity: {
-  //     events: {
-  //       onclick: {
-  //         enable: true,
-  //         mode: 'push', // Add particles on click
-  //       },
-  //     },
-  //     modes: {
-  //       push: {
-  //         particles_nb: 10, // Number of particles to add on each click
-  //       },
-  //     },
-  //   },
-  // });
-
-  // window.addEventListener('load', initSwiper);
+  // Rest of your JavaScript remains the same...
 
   // Floating Stats Data Drive Section
   const stats = document.querySelectorAll('#floating-stats .stat');
@@ -219,75 +166,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  if (document.querySelector('#typed-test')) {
-    new Typed('#typed-test', {
-      strings: [
-        'Hello, this is a test to check if Typed.js is working.',
-        'It should type and delete these messages.',
-        'If you see this, Typed.js is functional!',
-      ],
-      typeSpeed: 60,
-      backSpeed: 30,
-      backDelay: 1000,
-      startDelay: 500,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|',
-    });
-  }
-
-  // Ensure the elements are present before trying to use Typed.js
-  if (
-    document.querySelector('#problem-text') &&
-    document.querySelector('#know')
-  ) {
-    // Initialize typed.js for the problem text
-    new Typed('#problem-text', {
-      strings: [
-        'That 81% of children in South Africa cannot read.',
-        'Or that South Africa has the highest youth unemployment rate in the world.',
-        'We are solving both of those problems.',
-      ],
-      typeSpeed: 50,
-      backSpeed: 12,
-      backDelay: 1000,
-      startDelay: 1500,
-      loop: true,
-      loopCount: Infinity,
-      showCursor: true,
-      cursorChar: '|',
-    });
-
-    // Initialize typed.js for the "Did You Know?" text
-    new Typed('#know', {
-      strings: ['Did You Know?'],
-      typeSpeed: 60,
-      startDelay: 500,
-      loop: false,
-      showCursor: false,
-    });
-  } else {
-    console.error('Element(s) for Typed.js not found');
-  }
-
-  /* -- Additional handling for touch events -- */
-
-  // Handle mouse down event for desktop
+  // Handle mouse events
   window.onmousedown = (e) => handleOnDown(e);
-
-  // Handle touch start event for mobile
   window.ontouchstart = (e) => handleOnDown(e.touches[0]);
-
-  // Handle mouse up event for desktop
   window.onmouseup = (e) => handleOnUp(e);
-
-  // Handle touch end event for mobile
   window.ontouchend = (e) => handleOnUp(e.touches[0]);
-
-  // Handle mouse move event for desktop
   window.onmousemove = (e) => handleOnMove(e);
-
-  // Handle touch move event for mobile
   window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
   // -- End of About Us Image Track --
