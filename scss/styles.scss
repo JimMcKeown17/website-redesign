@@ -1210,19 +1210,43 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   z-index: -1;
 }
 
-.footer .container {
-  color: white;
+.footer {
+  .container {
+    color: white;
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 12px !important; // Ensure smaller font size for mobile
+      line-height: 1 !important; // Ensure smaller line height for mobile
+      p {
+        font-size: 12px !important;
+      }
+      .footer-info {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  .footer-info {
+    max-width: 275px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  ul li a {
+    font-size: 14px; // Default link font size
+
+    @media (max-width: 768px) {
+      font-size: 12px !important; // Ensure smaller font size for mobile
+      line-height: 2 !important; // Ensure smaller line height for mobile
+    }
+  }
 }
 
-.footer .container a {
-  text-decoration: none;
-}
 
-.footer-info {
-  max-width: 275px;
-  font-size: 14px;
-  line-height: 1.75;
-}
 
 /* DATA DRIVEN RESULTS SECTION */
 #data-driven-results {
@@ -2241,6 +2265,13 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   }
 }
 
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 300px; // Adjust this value to lower the height of images on mobile
+    object-fit: cover; // Keeps the aspect ratio without distortion
+  }
+}
+
 .impact-title-light {
   font-weight: 100;
 }
@@ -2387,6 +2418,12 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
     padding: 1.5rem;
     transition: 0.3s ease-in-out;
 
+    @media (max-width: 768px) {
+      line-height: 1.2; 
+      height: 220px;
+      overflow: hidden;
+    }
+
     .card-body {
       .fa-2x {
         color: rgba(var(--bs-dark-rgb)); // Icon color
@@ -2401,6 +2438,12 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
       .card-text {
         font-size: 0.9rem;
         color: #6c757d; // Text color for better readability
+      }
+
+      @media (max-width: 768px) {
+        line-height: 1.1; 
+        font-size: 12px;
+        padding: 6px;// Adjust line height specifically for text inside the card body
       }
     }
   }

@@ -1094,15 +1094,34 @@ h6 {
 .footer .container {
   color: white;
 }
-
 .footer .container a {
   text-decoration: none;
 }
-
-.footer-info {
+@media (max-width: 768px) {
+  .footer .container {
+    font-size: 12px !important;
+    line-height: 1 !important;
+  }
+  .footer .container p {
+    font-size: 12px !important;
+  }
+  .footer .container .footer-info {
+    font-size: 12px !important;
+  }
+}
+.footer .footer-info {
   max-width: 275px;
   font-size: 14px;
   line-height: 1.75;
+}
+.footer ul li a {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .footer ul li a {
+    font-size: 12px !important;
+    line-height: 2 !important;
+  }
 }
 
 /* DATA DRIVEN RESULTS SECTION */
@@ -2016,6 +2035,12 @@ h6 {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 300px;
+    object-fit: cover;
+  }
+}
 .impact-title-light {
   font-weight: 100;
 }
@@ -2139,6 +2164,13 @@ h6 {
   padding: 1.5rem;
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+  .approach .card {
+    line-height: 1.2;
+    height: 220px;
+    overflow: hidden;
+  }
+}
 .approach .card .card-body .fa-2x {
   color: rgba(var(--bs-dark-rgb));
 }
@@ -2150,6 +2182,13 @@ h6 {
 .approach .card .card-body .card-text {
   font-size: 0.9rem;
   color: #6c757d;
+}
+@media (max-width: 768px) {
+  .approach .card .card-body {
+    line-height: 1.1;
+    font-size: 12px;
+    padding: 6px;
+  }
 }
 .approach .card:hover {
   background-color: rgba(213, 214, 215, 0.6941176471);
