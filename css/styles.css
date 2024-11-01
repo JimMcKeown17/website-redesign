@@ -34,6 +34,10 @@ h6 {
   color: white; /* Smooth transition */
 }
 
+.nav-item {
+  margin-left: 50px;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
   border: none;
@@ -143,7 +147,21 @@ h6 {
 /* Mobile Styling */
 @media (max-width: 768px) {
   #navbar {
-    background-color: rgba(255, 255, 255, 0.95); /* Ensure readability on mobile */
+    background-color: rgba(255, 255, 255, 0.95);
+    color: rgb(42, 42, 42); /* Dark text initially */
+  }
+  .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.95) !important; /* Ensure dropdown background is visible */
+  }
+  .nav-link {
+    color: #000 !important;
+  }
+  .dropdown-item {
+    color: rgb(42, 42, 42) !important; /* Dark text for dropdown items on mobile */
+  }
+  .dropdown-item:hover {
+    background-color: #f8f9fa; /* Light grey background for better visibility on hover */
+    color: #000 !important; /* Darker color on hover */
   }
 }
 /* Navbar Dark Styling */
@@ -1857,6 +1875,23 @@ h6 {
   margin-left: 60px;
   margin-right: 0px;
 }
+@media (max-width: 768px) {
+  .hero-section-new {
+    height: 55vh;
+  }
+  .hero-section-new .container {
+    margin-left: 10px; /* Ensure readability on mobile */
+  }
+  .hero-section-new .btn {
+    display: none;
+  }
+  .hero-section-new .video-column {
+    display: none;
+  }
+  .hero-section-new .video-content {
+    display: none;
+  }
+}
 .hero-section-new .video-column {
   height: 550px; /* Set desired height */
   display: flex; /* Make the container a flexbox */
@@ -1989,6 +2024,8 @@ h6 {
   height: 500px;
   width: 100%;
   transition: 0.3s ease;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .impact-report:hover {
@@ -2003,6 +2040,11 @@ h6 {
 .yearly-reports h2 {
   font-weight: 200;
   font-size: 3rem;
+}
+@media (min-width: 768px) {
+  .yearly-reports .impact-report {
+    margin-top: 100px !important;
+  }
 }
 
 .donate-hero-section {
@@ -2133,4 +2175,10 @@ h6 {
 }
 .approach2 .accordian-highlight {
   color: rgba(var(--bs-dark-rgb));
+}
+
+@media (max-width: 768px) {
+  .children .content-section {
+    margin-top: 200px;
+  }
 }
