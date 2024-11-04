@@ -365,14 +365,48 @@
         once: true, // Animation happens only once
       });
     </script>
+
     <script>
-      document
-        .getElementById('video-thumbnail')
-        .addEventListener('click', function () {
-          // Hide the thumbnail and show the video
-          document.getElementById('video-thumbnail').style.display = 'none';
-          document.getElementById('video-player').style.display = 'block';
-        });
+      // Function to check if the device is mobile
+      function isMobile() {
+        return window.innerWidth <= 768; // Common breakpoint for mobile devices
+      }
+    
+      // Function to change navbar-dark to navbar and adjust classes/IDs on mobile devices
+      function adjustNavbar() {
+        if (isMobile()) {
+          // Change ID from "navbar-dark" to "navbar"
+          const darkNavbar = document.getElementById("navbar-dark");
+          if (darkNavbar) {
+            // Update the ID
+            darkNavbar.id = "navbar";
+    
+            // Change class from "navbar-dark" to "navbar-light"
+            if (darkNavbar.classList.contains("navbar-dark")) {
+              darkNavbar.classList.remove("navbar-dark");
+              darkNavbar.classList.add("navbar-light");
+            }
+          }
+    
+          // Change ID from "navbarNavDropdownDark" to "navbarNavDropdown"
+          const dropdownNav = document.getElementById("navbarNavDropdownDark");
+          if (dropdownNav) {
+            dropdownNav.id = "navbarNavDropdown";
+          }
+    
+          // Update the toggler button target to match the new dropdown ID
+          const navbarToggler = document.querySelector('.navbar-toggler');
+          if (navbarToggler && navbarToggler.getAttribute('data-bs-target') === '#navbarNavDropdownDark') {
+            navbarToggler.setAttribute('data-bs-target', '#navbarNavDropdown');
+          }
+        }
+      }
+    
+      // Adjust navbar on initial load
+      document.addEventListener("DOMContentLoaded", adjustNavbar);
+    
+      // Adjust navbar on window resize to accommodate any changes
+      window.addEventListener("resize", adjustNavbar);
     </script>
     <script src="js/script.js"></script>
   </body>
