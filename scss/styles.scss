@@ -100,6 +100,12 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   margin-right: 8px;
 }
 
+#navbarNavDropdownDark .our-team-drop::before {
+  content: "\f0c0"; /* User icon for Our Team */
+  font-family: 'FontAwesome';
+  margin-right: 8px;
+}
+
 #navbarNavDropdown .nav-link[href*='programs']::before {
   content: "\f0c0"; /* Group icon for Programs */
 }
@@ -299,6 +305,11 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
       font-size: 1rem;
       line-height: 1;
     }
+  }
+}
+@media (max-width: 768px) {
+  .mission-row{
+    margin-bottom: 10px !important;
   }
 }
 
@@ -1665,6 +1676,19 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  .children-hero-section p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .h2-programmes {
+    margin-top: 10px;
+  }
+}
+
 .content-section img {
   width: 100%;
   border-radius: 10px;
@@ -2519,12 +2543,23 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
   }
 }
 
-.children .content-section{
-  @media (max-width: 768px) {
-    margin-top: 200px;
-    }
+@media (max-width: 768px) {
+  .content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
 
+  .children .content-section {
+    // margin-top: 200px;
+    margin-bottom: 0;
+
+    .content-section p {
+      font-size: 16px !important; // Bootstrap might be overriding this
+      line-height: 1.4 !important;
+    }
+  }
 }
+
 
 .annual-reports-impact {
 

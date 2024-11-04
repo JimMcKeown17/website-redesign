@@ -84,6 +84,12 @@ h6 {
   margin-right: 8px;
 }
 
+#navbarNavDropdownDark .our-team-drop::before {
+  content: "\f0c0"; /* User icon for Our Team */
+  font-family: "FontAwesome";
+  margin-right: 8px;
+}
+
 #navbarNavDropdown .nav-link[href*=programs]::before {
   content: "\f0c0"; /* Group icon for Programs */
 }
@@ -147,6 +153,10 @@ h6 {
 /* Mobile Styling */
 @media (max-width: 768px) {
   #navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: rgb(42, 42, 42); /* Dark text initially */
+  }
+  #navbar-dark {
     background-color: rgba(255, 255, 255, 0.95);
     color: rgb(42, 42, 42); /* Dark text initially */
   }
@@ -267,6 +277,11 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .mission-row {
+    margin-bottom: 10px !important;
+  }
+}
 @media (max-width: 768px) {
   .mission {
     line-height: 1.5;
@@ -1505,6 +1520,17 @@ h6 {
   font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  .children-hero-section p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 768px) {
+  .h2-programmes {
+    margin-top: 10px;
+  }
+}
 .content-section img {
   width: 100%;
   border-radius: 10px;
@@ -2247,11 +2273,18 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
   .children .content-section {
-    margin-top: 200px;
+    margin-bottom: 0;
+  }
+  .children .content-section .content-section p {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
   }
 }
-
 @media (max-width: 768px) {
   .annual-reports-impact .container {
     margin-top: 120px;
