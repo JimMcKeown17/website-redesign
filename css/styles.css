@@ -1128,14 +1128,14 @@ h6 {
   .footer .container p {
     font-size: 12px !important;
   }
-  .footer .container .footer-info {
+  .footer .container .footer-info p {
     font-size: 12px !important;
+    line-height: 1.2;
   }
 }
-.footer .footer-info {
-  max-width: 275px;
+.footer .footer-info p {
   font-size: 14px;
-  line-height: 1.75;
+  line-height: 0.5;
 }
 .footer ul li a {
   font-size: 14px;
@@ -2093,7 +2093,8 @@ h6 {
 
 @media (max-width: 768px) {
   .carousel-item img {
-    height: 300px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
   }
 }

@@ -1245,16 +1245,18 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
       p {
         font-size: 12px !important;
       }
-      .footer-info {
+      .footer-info p {
         font-size: 12px !important;
+        line-height: 1.2;
       }
     }
   }
 
-  .footer-info {
-    max-width: 275px;
+
+
+  .footer-info p {
     font-size: 14px;
-    line-height: 1.75;
+    line-height: .5;
   }
 
   ul li a {
@@ -2330,8 +2332,9 @@ $headings-font-family: 'Poppins', sans-serif; // Override heading font family
 
 @media (max-width: 768px) {
   .carousel-item img {
-    height: 300px; // Adjust this value to lower the height of images on mobile
-    object-fit: cover; // Keeps the aspect ratio without distortion
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
 
